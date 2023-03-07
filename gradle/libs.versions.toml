@@ -13,8 +13,6 @@ jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-
 kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka"}
 kafka-connect = { module = "org.apache.kafka:connect-runtime", version.ref = "kafka"}
 kafka-json = { module = "io.confluent:kafka-json-serializer", version.ref = "confluent"}
-kafka-streams = { module = "org.apache.kafka:kafka-streams", version.ref = "kafka"}
-kafka-streams-json-serde = { module = "io.confluent:kafka-streams-json-schema-serde", version.ref = "confluent"}
 kmongo = { module = "org.litote.kmongo:kmongo", version.ref = "kmongo" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotest-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }

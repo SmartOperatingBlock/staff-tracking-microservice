@@ -26,10 +26,8 @@ repositories {
 dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kafka.clients)
-    implementation(libs.kafka.streams)
     implementation(libs.kafka.connect)
     implementation(libs.kafka.json)
-    implementation(libs.kafka.streams.json.serde)
     implementation(libs.jackson.module.kotlin)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
