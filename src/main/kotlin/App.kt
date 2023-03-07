@@ -1,3 +1,9 @@
+import infrastructure.events.EventConsumer
+import infrastructure.events.KafkaClient
+import infrastructure.events.model.TrackingEventDto
+import infrastructure.provider.Provider
+import infrastructure.provider.ProviderImpl
+
 /*
  * Copyright (c) 2023. Smart Operating Block
  *
@@ -7,8 +13,10 @@
  */
 
 /**
- * Template for kotlin projects.
+ * The application launcher.
  */
 fun main() {
-    println("Hello World from Kotlin Template")
+    val provider: Provider = ProviderImpl()
+    val eventConsumer: EventConsumer<TrackingEventDto> = KafkaClient(provider.trackingDatabaseManager)
+    eventConsumer.start()
 }
