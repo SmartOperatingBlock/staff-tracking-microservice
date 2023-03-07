@@ -6,7 +6,7 @@
  * https://opensource.org/licenses/MIT.
  */
 
-package infrastructure.events
+package infrastructure.events.model
 
 import entity.HealthProfessionalId
 import entity.RoomId
