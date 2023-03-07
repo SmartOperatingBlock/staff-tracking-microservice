@@ -14,7 +14,7 @@ import io.confluent.kafka.serializers.KafkaJsonDeserializer
 fun KafkaClient.loadConsumerProperties(): Map<String, Any> = mapOf(
     "bootstrap.servers" to System.getenv("BOOTSTRAP_SERVER_URL"),
     "schema.registry.url" to System.getenv("SCHEMA_REGISTRY_URL"),
-    "group.id" to "io.github.smartoperatingblock",
+    "group.id" to "tracking-data-consumer",
     "key.deserializer" to "org.apache.kafka.common.serialization.StringDeserializer",
     "value.deserializer" to KafkaJsonDeserializer::class.java
 )

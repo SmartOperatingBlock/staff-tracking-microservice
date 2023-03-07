@@ -29,8 +29,8 @@ data class TrackingEventDto(
 /** Extension function to convert the event to a [TrackingData]. */
 fun TrackingEventDto.toTrackingData(): TrackingData =
     TrackingData(
-        dateTime = Instant.parse(dateTime),
-        roomId = RoomId(roomId),
-        healthProfessionalId = HealthProfessionalId(healthProfessionalId),
-        trackingType = if (data) TrackingType.ENTER else TrackingType.EXIT
+        dateTime = Instant.parse(this.dateTime),
+        roomId = RoomId(this.roomId),
+        healthProfessionalId = HealthProfessionalId(this.healthProfessionalId),
+        trackingType = if (this.data) TrackingType.ENTER else TrackingType.EXIT
     )
