@@ -8,7 +8,7 @@
 
 package entity
 
-import java.sql.Timestamp
+import java.time.Instant
 
 /** The data of the health professionals tracking.
  * A tracking is composed by
@@ -16,7 +16,7 @@ import java.sql.Timestamp
  * the [healthProfessionalId] and the [trackingType] of the event.
  */
 data class TrackingData(
-    val dateTime: Timestamp,
+    val dateTime: Instant,
     val roomId: RoomId,
     val healthProfessionalId: HealthProfessionalId,
     val trackingType: TrackingType
