@@ -8,7 +8,12 @@
 
 package infrastructure.events
 
+import entity.HealthProfessionalId
+import entity.RoomId
+import entity.TrackingData
+import entity.TrackingType
 import kotlinx.serialization.Serializable
+import java.time.Instant
 
 /** The Tracking Event composed by a [key], a [healthProfessionalId],
  * a [roomId], the [data] and the [dateTime]. */
@@ -20,3 +25,12 @@ data class TrackingEventDto(
     val data: Boolean,
     val dateTime: String
 )
+
+/** Extension function to convert the event to a [TrackingData]. */
+fun TrackingEventDto.toTrackingData(): TrackingData =
+    TrackingData(
+        dateTime = Instant.parse(dateTime),
+        roomId = RoomId(roomId),
+        healthProfessionalId = HealthProfessionalId(healthProfessionalId),
+        trackingType = if (data) TrackingType.ENTER else TrackingType.EXIT
+    )
