@@ -32,7 +32,7 @@ object TrackingServices {
         private val healthProfessionalId: HealthProfessionalId,
         private val from: Instant?,
         private val trackingDataRepository: TrackingDataRepository
-    ): ApplicationService<Set<TrackingData>> {
+    ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
             trackingDataRepository.getHealthProfessionalTrackingData(healthProfessionalId, from)
@@ -44,7 +44,7 @@ object TrackingServices {
         private val roomId: RoomId,
         private val from: Instant?,
         private val trackingDataRepository: TrackingDataRepository
-    ): ApplicationService<Set<TrackingData>> {
+    ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
             trackingDataRepository.getRoomTrackingData(roomId, from)
@@ -55,7 +55,7 @@ object TrackingServices {
     class GetLatestTrackingData(
         private val from: Instant?,
         private val trackingDataRepository: TrackingDataRepository
-    ): ApplicationService<Set<TrackingData>> {
+    ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
             trackingDataRepository.getLatestTrackingData(from)
