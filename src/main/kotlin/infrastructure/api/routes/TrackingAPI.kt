@@ -25,7 +25,7 @@ import java.time.Instant
 /** The API of the Staff Tracking Microservice. */
 fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: String) {
 
-    get("$apiPath/tracking-data/{healthProfessionalId}") {
+    get("$apiPath/health-professionals-tracking/{healthProfessionalId}") {
         call.respondWithList(
             TrackingServices.GetHealthProfessionalTrackingData(
                 HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
@@ -35,7 +35,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
         )
     }
 
-    get("$apiPath/tracking-data/{roomId}") {
+    get("$apiPath/rooms-trackin/{roomId}") {
         call.respondWithList(
             TrackingServices.GetRoomTrackingData(
                 RoomId(call.parameters["roomId"].orEmpty()),
@@ -45,7 +45,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
         )
     }
 
-    get("$apiPath/tracking-data") {
+    get("$apiPath/block-tracking-data") {
         call.respondWithList(
             TrackingServices.GetLatestTrackingData(
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
