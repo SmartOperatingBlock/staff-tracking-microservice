@@ -8,9 +8,12 @@
 
 package infrastructure.provider
 
-import usecase.repository.TrackingDataRepository
+import application.controller.manager.StaffTrackingDatabaseManager
+import infrastructure.database.MongoClient
 
-/** The implementation of the [Provider] interface. */
+/**
+ * The implementation of the [Provider] interface.
+ */
 class ProviderImpl : Provider {
 
     init {
@@ -19,5 +22,7 @@ class ProviderImpl : Provider {
         }
     }
 
-    override val trackingDatabaseManager: TrackingDataRepository = TODO() // MongoClient
+    override val staffTrackingDatabaseManager: StaffTrackingDatabaseManager by lazy {
+        MongoClient(System.getenv("STAFF_TRACKING_MONGODB_URL"))
+    }
 }

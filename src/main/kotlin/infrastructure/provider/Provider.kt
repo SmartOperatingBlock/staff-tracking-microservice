@@ -8,11 +8,14 @@
 
 package infrastructure.provider
 
-import usecase.repository.TrackingDataRepository
+import application.controller.manager.StaffTrackingDatabaseManager
 
-/** The provider of the [TrackingDataRepository]. */
+/**
+ * It's responsible to provide the [StaffTrackingDatabaseManager]
+ * to Staff Tracking Controller.
+ */
 interface Provider {
 
-    /** The manager of staff tracking database operations. */
-    val trackingDatabaseManager: TrackingDataRepository
+    /** The manager of staff tracking inside database. */
+    val staffTrackingDatabaseManager: StaffTrackingDatabaseManager
 }
