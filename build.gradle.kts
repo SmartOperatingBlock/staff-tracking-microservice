@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.kmongo)
     implementation(libs.kotlin.stdlib)
     implementation(libs.kafka.clients)
     implementation(libs.kafka.connect)
