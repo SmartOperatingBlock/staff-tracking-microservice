@@ -8,22 +8,22 @@
 
 package application.service
 
+import application.controller.manager.StaffTrackingDatabaseManager
 import entity.HealthProfessionalId
 import entity.RoomId
 import entity.TrackingData
-import usecase.repository.TrackingDataRepository
 import java.time.Instant
 
 /** The module with all application services. */
 object TrackingServices {
 
-    /** The application service to add some [trackingData] given the [trackingDataRepository]. */
+    /** The application service to add some [trackingData] given the [staffTrackingDatabaseManager]. */
     class AddTrackingData(
         private val trackingData: TrackingData,
-        private val trackingDataRepository: TrackingDataRepository
+        private val staffTrackingDatabaseManager: StaffTrackingDatabaseManager
     ) : ApplicationService<Boolean> {
         override fun execute(): Boolean =
-            trackingDataRepository.addTrackingData(trackingData)
+            staffTrackingDatabaseManager.addTrackingData(trackingData)
     }
 
     /** The application service to get health professionals tracking data
@@ -31,11 +31,11 @@ object TrackingServices {
     class GetHealthProfessionalTrackingData(
         private val healthProfessionalId: HealthProfessionalId,
         private val from: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val staffTrackingDatabaseManager: StaffTrackingDatabaseManager
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getHealthProfessionalTrackingData(healthProfessionalId, from)
+            staffTrackingDatabaseManager.getHealthProfessionalTrackingData(healthProfessionalId, from)
     }
 
     /** The application service to get room tracking data
@@ -43,21 +43,21 @@ object TrackingServices {
     class GetRoomTrackingData(
         private val roomId: RoomId,
         private val from: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val staffTrackingDatabaseManager: StaffTrackingDatabaseManager
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getRoomTrackingData(roomId, from)
+            staffTrackingDatabaseManager.getRoomTrackingData(roomId, from)
     }
 
     /** The application service to get the latest tracking data
      * given the [trackingDataRepository] and [from] a certain moment. */
     class GetLatestTrackingData(
         private val from: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val staffTrackingDatabaseManager: StaffTrackingDatabaseManager
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getLatestTrackingData(from)
+            staffTrackingDatabaseManager.getLatestTrackingData(from)
     }
 }

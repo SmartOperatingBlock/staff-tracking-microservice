@@ -8,18 +8,18 @@
 
 package infrastructure.events
 
+import application.controller.manager.StaffTrackingDatabaseManager
 import application.service.TrackingServices
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import infrastructure.events.model.TrackingEventDto
 import infrastructure.events.model.toTrackingData
 import org.apache.kafka.clients.consumer.KafkaConsumer
-import usecase.repository.TrackingDataRepository
 import java.time.Duration
 
 /** The Kafka Client to consume staff tracking events.
  * @param dbManager the database manager for database operations.
  */
-class KafkaClient(private val dbManager: TrackingDataRepository) : EventConsumer<TrackingEventDto> {
+class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventConsumer<TrackingEventDto> {
 
     init {
         listOf(System.getenv("BOOTSTRAP_SERVER_URL"), System.getenv("SCHEMA_REGISTRY_URL")).forEach {

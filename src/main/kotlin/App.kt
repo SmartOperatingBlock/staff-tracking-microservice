@@ -17,6 +17,6 @@ import infrastructure.provider.ProviderImpl
  */
 fun main() {
     val provider: Provider = ProviderImpl()
-    val eventConsumer: EventConsumer<TrackingEventDto> = KafkaClient(provider.trackingDatabaseManager)
+    val eventConsumer: EventConsumer<TrackingEventDto> = KafkaClient(provider.staffTrackingDatabaseManager)
     eventConsumer.start()
 }
