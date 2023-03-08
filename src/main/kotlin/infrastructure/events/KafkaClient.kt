@@ -39,9 +39,20 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
         kafkaConsumer.subscribe(listOf(topic)).run {
             while (true) {
                 kafkaConsumer.poll(Duration.ofMillis(pollingTime)).forEach { event ->
-                    val trackingEvent = jacksonObjectMapper().convertValue(event.value(), TrackingEventDto::class.java)
-                    if (trackingEvent != null) {
+                    try {
+                        val trackingEvent = jacksonObjectMapper().convertValue(
+                            event.value(),
+                            TrackingEventDto::class.java
+                        )
                         consume(trackingEvent)
+                    } catch (e: IllegalArgumentException) {
+                        println(
+                            """
+                            Invalid Event Schema!
+                            Check out the events API here:
+                             https://smartoperatingblock.github.io/dt-event-gateway/documentation/asyncapi-doc
+                            """.trimIndent() + e
+                        )
                     }
                 }
             }
@@ -55,6 +66,6 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
         /** The topic on which consume tracking events. */
         const val topic = "tracking-events"
         /** The polling time. */
-        const val pollingTime: Long = 100
+        const val pollingTime: Long = 250
     }
 }
