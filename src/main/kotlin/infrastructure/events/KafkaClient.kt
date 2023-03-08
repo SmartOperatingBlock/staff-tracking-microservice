@@ -8,6 +8,7 @@
 
 package infrastructure.events
 
+import application.controller.StaffTrackingController
 import application.controller.manager.StaffTrackingDatabaseManager
 import application.service.TrackingServices
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -60,7 +61,7 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
     }
 
     override fun consume(event: TrackingEventDto): Boolean =
-        TrackingServices.AddTrackingData(event.toTrackingData(), dbManager).execute()
+        TrackingServices.AddTrackingData(event.toTrackingData(), StaffTrackingController(dbManager)).execute()
 
     companion object {
         /** The topic on which consume tracking events. */
