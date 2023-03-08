@@ -1,6 +1,5 @@
-import infrastructure.events.EventConsumer
+import infrastructure.api.ApiRouter
 import infrastructure.events.KafkaClient
-import infrastructure.events.model.TrackingEventDto
 import infrastructure.provider.Provider
 import infrastructure.provider.ProviderImpl
 
@@ -17,6 +16,6 @@ import infrastructure.provider.ProviderImpl
  */
 fun main() {
     val provider: Provider = ProviderImpl()
-    val eventConsumer: EventConsumer<TrackingEventDto> = KafkaClient(provider.staffTrackingDatabaseManager)
-    eventConsumer.start()
+    ApiRouter(provider.staffTrackingDatabaseManager).start()
+    KafkaClient(provider.staffTrackingDatabaseManager).start()
 }
