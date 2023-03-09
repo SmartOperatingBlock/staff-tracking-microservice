@@ -44,6 +44,14 @@ paths:
             type: string
             format: date-time
             example: '2017-07-21T17:32:28Z'
+        - in: query
+          name: to
+          required: false
+          description: Specify a past date in order to obtain historical data until that date. The date must be specified in the ISO 8601 UTC date format.
+          schema:
+            type: string
+            format: date-time
+            example: '2017-07-21T17:32:28Z'
       responses:
         '200':
           description: OK
@@ -78,6 +86,14 @@ paths:
             type: string
             format: date-time
             example: '2017-07-21T17:32:28Z'
+        - in: query
+          name: to
+          required: false
+          description: Specify a past date in order to obtain historical data until that date. The date must be specified in the ISO 8601 UTC date format.
+          schema:
+            type: string
+            format: date-time
+            example: '2017-07-21T17:32:28Z'
       responses:
         '200':
           description: OK
@@ -101,7 +117,15 @@ paths:
         - in: query
           name: from
           required: false
-          description: Specify a past date in order to obtain historical data. The date must be specified in the ISO 8601 UTC date format.
+          description: Specify a past date in order to obtain historical data from that date. The date must be specified in the ISO 8601 UTC date format.
+          schema:
+            type: string
+            format: date-time
+            example: '2017-07-21T17:32:28Z'
+        - in: query
+          name: to
+          required: false
+          description: Specify a past date in order to obtain historical data until that date. The date must be specified in the ISO 8601 UTC date format.
           schema:
             type: string
             format: date-time
