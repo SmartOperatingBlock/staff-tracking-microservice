@@ -10,6 +10,7 @@ package infrastructure.api.routes
 
 import application.controller.StaffTrackingController
 import application.controller.manager.StaffTrackingDatabaseManager
+import application.presenter.api.toTrackingDataApiDto
 import application.service.TrackingServices
 import entity.HealthProfessionalId
 import entity.RoomId
@@ -25,23 +26,27 @@ import java.time.Instant
 /** The API of the Staff Tracking Microservice. */
 fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: String) {
 
-    get("$apiPath/health-professionals-tracking/{healthProfessionalId}") {
+    get("$apiPath/health-professionals-tracking-data/{healthProfessionalId}") {
         call.respondWithList(
             TrackingServices.GetHealthProfessionalTrackingData(
                 HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
                 StaffTrackingController(databaseManager)
-            ).execute().toList()
+            ).execute().map { data ->
+                data.toTrackingDataApiDto()
+            }.toList()
         )
     }
 
-    get("$apiPath/rooms-trackin/{roomId}") {
+    get("$apiPath/rooms-tracking-data/{roomId}") {
         call.respondWithList(
             TrackingServices.GetRoomTrackingData(
                 RoomId(call.parameters["roomId"].orEmpty()),
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
                 StaffTrackingController(databaseManager)
-            ).execute().toList()
+            ).execute().map { data ->
+                data.toTrackingDataApiDto()
+            }.toList()
         )
     }
 
@@ -50,7 +55,9 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             TrackingServices.GetLatestTrackingData(
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
                 StaffTrackingController(databaseManager)
-            ).execute().toList()
+            ).execute().map { data ->
+                data.toTrackingDataApiDto()
+            }.toList()
         )
     }
 }
