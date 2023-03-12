@@ -16,6 +16,6 @@ import infrastructure.provider.ProviderImpl
  */
 fun main() {
     val provider: Provider = ProviderImpl()
-    ApiRouter(provider.staffTrackingDatabaseManager).start()
     KafkaClient(provider.staffTrackingDatabaseManager).start()
+    ApiRouter(provider.staffTrackingDatabaseManager).start()
 }
