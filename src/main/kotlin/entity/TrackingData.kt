@@ -20,7 +20,18 @@ data class TrackingData(
     val roomId: RoomId,
     val healthProfessionalId: HealthProfessionalId,
     val trackingType: TrackingType
-)
+) {
+    override fun equals(other: Any?): Boolean = when {
+        other === this -> true
+        other is TrackingData -> (
+            this.dateTime == other.dateTime && this.roomId.id == other.roomId.id &&
+                this.healthProfessionalId.id == other.healthProfessionalId.id
+            )
+        else -> false
+    }
+
+    override fun hashCode(): Int = this.dateTime.hashCode()
+}
 
 /** The type of the tracking event. */
 enum class TrackingType {
@@ -28,7 +39,15 @@ enum class TrackingType {
 }
 
 /** The [id] of the Health Professional. */
-data class HealthProfessionalId(val id: String)
+data class HealthProfessionalId(val id: String) {
+    init {
+        require(id.isNotEmpty())
+    }
+}
 
 /** The [id] of the room. */
-data class RoomId(val id: String)
+data class RoomId(val id: String) {
+    init {
+        require(id.isNotEmpty())
+    }
+}
