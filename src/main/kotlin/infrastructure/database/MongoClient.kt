@@ -60,8 +60,22 @@ class MongoClient(
         from: Instant?,
         to: Instant?
     ): Set<TrackingData> =
-        trackingDataCollection.find().filter {
-            it.metadata.healthProfessionalId.equals(healthProfessionalId)
+        getLatestTrackingData(from, to).filter {
+            it.healthProfessionalId == healthProfessionalId
+        }.toSet()
+
+    override fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?) =
+        getLatestTrackingData(from, to).filter {
+            it.roomId == roomId
+        }.toSet()
+
+    private fun getBlockCurrentTrackingData(): Set<TrackingData> =
+        trackingDataCollection.find().groupBy {
+            TimeSeriesTrackingData::metadata / TimeSeriesTrackingDataMetadata::healthProfessionalId
+        }.map {
+            it.value.sortedByDescending { list -> list.dateTime }.first()
+        }.filter {
+            it.trackingType == TrackingType.ENTER.name
         }.map {
             it.toTrackingData()
         }.toSet()
