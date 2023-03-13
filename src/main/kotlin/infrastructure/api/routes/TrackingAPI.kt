@@ -26,25 +26,26 @@ import java.time.Instant
 /** The API of the Staff Tracking Microservice. */
 fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: String) {
 
+    fun String.toDateTime(): Instant = Instant.parse(this)
+
     get("$apiPath/health-professionals-tracking-data/{healthProfessionalId}") {
-        call.respondWithList(
-            TrackingServices.GetHealthProfessionalTrackingData(
-                HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
-                call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
-                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
-                StaffTrackingController(databaseManager)
-            ).execute().map { data ->
-                data.toTrackingDataApiDto()
-            }.toList()
-        )
+        val responseEntryList = TrackingServices.GetHealthProfessionalTrackingData(
+            HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
+            call.request.queryParameters["from"]?.toDateTime(),
+            call.request.queryParameters["to"]?.toDateTime(),
+            StaffTrackingController(databaseManager)
+        ).execute().map { data ->
+            data.toTrackingDataApiDto()
+        }.toList()
+        call.respondWithList(responseEntryList)
     }
 
     get("$apiPath/rooms-tracking-data/{roomId}") {
         call.respondWithList(
             TrackingServices.GetRoomTrackingData(
                 RoomId(call.parameters["roomId"].orEmpty()),
-                call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
-                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
+                call.request.queryParameters["from"]?.toDateTime(),
+                call.request.queryParameters["to"]?.toDateTime(),
                 StaffTrackingController(databaseManager)
             ).execute().map { data ->
                 data.toTrackingDataApiDto()
@@ -55,8 +56,8 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
     get("$apiPath/block-tracking-data") {
         call.respondWithList(
             TrackingServices.GetLatestTrackingData(
-                call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
-                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
+                call.request.queryParameters["from"]?.toDateTime(),
+                call.request.queryParameters["to"]?.toDateTime(),
                 StaffTrackingController(databaseManager)
             ).execute().map { data ->
                 data.toTrackingDataApiDto()
