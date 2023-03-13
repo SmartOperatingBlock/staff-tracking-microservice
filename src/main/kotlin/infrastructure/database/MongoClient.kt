@@ -47,9 +47,13 @@ class MongoClient(
 //    override fun getPatient(taxCode: PatientData.TaxCode): Patient? =
 //        patientsCollection.findOne(Patient::taxCode eq taxCode)
 
-    override fun addTrackingData(trackingData: TrackingData): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun addTrackingData(trackingData: TrackingData) =
+        try {
+            trackingDataCollection.insertOne(trackingData.toTimeSeriesTrackingData()).wasAcknowledged()
+        } catch (exception: MongoException) {
+            println(exception)
+            false
+        }
 
     override fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
