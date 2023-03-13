@@ -8,7 +8,6 @@
 
 package application.service
 
-import application.controller.manager.StaffTrackingDatabaseManager
 import entity.HealthProfessionalId
 import entity.RoomId
 import entity.TrackingData
