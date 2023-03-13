@@ -14,6 +14,7 @@ import application.presenter.database.TimeSeriesTrackingDataMetadata
 import application.presenter.database.toTimeSeriesTrackingData
 import application.presenter.database.toTrackingData
 import com.mongodb.MongoException
+import com.mongodb.client.MongoDatabase
 import entity.HealthProfessionalId
 import entity.RoomId
 import entity.TrackingData
@@ -36,7 +37,10 @@ class MongoClient(
         }
     }
 
-    private val database = KMongo.createClient(connectionString).getDatabase(databaseName)
+    /**
+     * The db of the application.
+     */
+    val database: MongoDatabase = KMongo.createClient(connectionString).getDatabase(databaseName)
 
     private val trackingDataCollection =
         database.getCollection<TimeSeriesTrackingData>("tracking_data")
