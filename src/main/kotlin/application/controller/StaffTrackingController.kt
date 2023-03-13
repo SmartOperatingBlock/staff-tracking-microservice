@@ -23,12 +23,16 @@ class StaffTrackingController(private val dbManager: StaffTrackingDatabaseManage
     override fun addTrackingData(trackingData: TrackingData) =
         dbManager.addTrackingData(trackingData)
 
-    override fun getHealthProfessionalTrackingData(healthProfessionalId: HealthProfessionalId, from: Instant?) =
-        dbManager.getHealthProfessionalTrackingData(healthProfessionalId, from)
+    override fun getHealthProfessionalTrackingData(
+        healthProfessionalId: HealthProfessionalId,
+        from: Instant?,
+        to: Instant?
+    ) =
+        dbManager.getHealthProfessionalTrackingData(healthProfessionalId, from, to)
 
-    override fun getRoomTrackingData(roomId: RoomId, from: Instant?) =
-        dbManager.getRoomTrackingData(roomId, from)
+    override fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?) =
+        dbManager.getRoomTrackingData(roomId, from, to)
 
-    override fun getLatestTrackingData(from: Instant?): Set<TrackingData> =
-        dbManager.getLatestTrackingData(from)
+    override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> =
+        dbManager.getLatestTrackingData(from, to)
 }

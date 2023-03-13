@@ -28,18 +28,21 @@ interface StaffTrackingDatabaseManager {
      * @param healthProfessionalId the id of the health professional.
      * @param from the instant from which retrieve tracking data.
      */
-    fun getHealthProfessionalTrackingData(healthProfessionalId: HealthProfessionalId, from: Instant?): Set<TrackingData>
+    fun getHealthProfessionalTrackingData(
+        healthProfessionalId: HealthProfessionalId,
+        from: Instant?,
+        to: Instant?
+    ): Set<TrackingData>
 
     /**
      * Get the tracking data of a room.
      * @param roomId the room in which retrieve tracking data.
-     * @param from the instant from which retrieve tracking data.
      */
-    fun getRoomTrackingData(roomId: RoomId, from: Instant?): Set<TrackingData>
+    fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?): Set<TrackingData>
 
     /**
      * Get the latest tracking data starting from a given instant.
      * @param from the instant from which retrieve tracking data.
      */
-    fun getLatestTrackingData(from: Instant?): Set<TrackingData>
+    fun getLatestTrackingData(from: Instant?, to: Instant? = Instant.now()): Set<TrackingData>
 }

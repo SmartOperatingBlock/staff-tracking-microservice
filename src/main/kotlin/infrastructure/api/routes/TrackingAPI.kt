@@ -31,6 +31,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             TrackingServices.GetHealthProfessionalTrackingData(
                 HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
+                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
                 StaffTrackingController(databaseManager)
             ).execute().map { data ->
                 data.toTrackingDataApiDto()
@@ -43,6 +44,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             TrackingServices.GetRoomTrackingData(
                 RoomId(call.parameters["roomId"].orEmpty()),
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
+                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
                 StaffTrackingController(databaseManager)
             ).execute().map { data ->
                 data.toTrackingDataApiDto()
@@ -54,6 +56,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
         call.respondWithList(
             TrackingServices.GetLatestTrackingData(
                 call.request.queryParameters["from"]?.let { from -> Instant.parse(from) },
+                call.request.queryParameters["to"]?.let { to -> Instant.parse(to) },
                 StaffTrackingController(databaseManager)
             ).execute().map { data ->
                 data.toTrackingDataApiDto()

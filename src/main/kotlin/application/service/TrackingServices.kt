@@ -8,6 +8,7 @@
 
 package application.service
 
+import application.controller.manager.StaffTrackingDatabaseManager
 import entity.HealthProfessionalId
 import entity.RoomId
 import entity.TrackingData
@@ -31,11 +32,12 @@ object TrackingServices {
     class GetHealthProfessionalTrackingData(
         private val healthProfessionalId: HealthProfessionalId,
         private val from: Instant?,
+        private val to: Instant?,
         private val trackingDataRepository: TrackingDataRepository
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getHealthProfessionalTrackingData(healthProfessionalId, from)
+            trackingDataRepository.getHealthProfessionalTrackingData(healthProfessionalId, from, to)
     }
 
     /** The application service to get room tracking data
@@ -43,21 +45,23 @@ object TrackingServices {
     class GetRoomTrackingData(
         private val roomId: RoomId,
         private val from: Instant?,
+        private val to: Instant?,
         private val trackingDataRepository: TrackingDataRepository
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getRoomTrackingData(roomId, from)
+            trackingDataRepository.getRoomTrackingData(roomId, from, to)
     }
 
     /** The application service to get the latest tracking data
      * given the [trackingDataRepository] and [from] a certain moment. */
     class GetLatestTrackingData(
         private val from: Instant?,
+        private val to: Instant?,
         private val trackingDataRepository: TrackingDataRepository
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
-            trackingDataRepository.getLatestTrackingData(from)
+            trackingDataRepository.getLatestTrackingData(from, to)
     }
 }

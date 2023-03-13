@@ -24,16 +24,17 @@ interface TrackingDataRepository {
      */
     fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
-        from: Instant?
+        from: Instant?,
+        to: Instant?
     ): Set<TrackingData>
 
     /** Get the room tracking data given its [roomId].
      *  @param from the instant from which retrieve tracking data.
      */
-    fun getRoomTrackingData(roomId: RoomId, from: Instant?): Set<TrackingData>
+    fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?): Set<TrackingData>
 
     /** Get the latest tracking data.
      *  @param from the instant from which retrieve tracking data.
      */
-    fun getLatestTrackingData(from: Instant?): Set<TrackingData>
+    fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData>
 }

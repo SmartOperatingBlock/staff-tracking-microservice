@@ -53,7 +53,8 @@ class MongoClient(
 
     override fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
-        from: Instant?
+        from: Instant?,
+        to: Instant?
     ): Set<TrackingData> =
         trackingDataCollection.find().filter {
             it.metadata.healthProfessionalId.equals(healthProfessionalId)
@@ -61,11 +62,11 @@ class MongoClient(
             it.toTrackingData()
         }.toSet()
 
-    override fun getRoomTrackingData(roomId: RoomId, from: Instant?): Set<TrackingData> {
+    override fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?): Set<TrackingData> {
         TODO("Not yet implemented")
     }
 
-    override fun getLatestTrackingData(from: Instant?): Set<TrackingData> {
+    override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> {
         TODO("Not yet implemented")
     }
 
