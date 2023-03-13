@@ -23,17 +23,18 @@ class MockDbManager : StaffTrackingDatabaseManager {
 
     override fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
-        from: Instant?
+        from: Instant?,
+        to: Instant?
     ): Set<TrackingData> =
         trackingDataCollection.filter {
             it.healthProfessionalId == healthProfessionalId
         }.toSet()
 
-    override fun getRoomTrackingData(roomId: RoomId, from: Instant?): Set<TrackingData> =
+    override fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?): Set<TrackingData> =
         trackingDataCollection.filter {
             it.roomId == roomId
         }.toSet()
 
-    override fun getLatestTrackingData(from: Instant?): Set<TrackingData> =
+    override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> =
         trackingDataCollection
 }

@@ -38,13 +38,18 @@ class TestApplicationService : StringSpec({
 
     "The application service should be able to get tracking data from a room id" {
         staffTrackingController.addTrackingData(mockTrackingData)
-        staffTrackingController.getRoomTrackingData(mockTrackingData.roomId, null).isNotEmpty() shouldBe true
+        staffTrackingController.getRoomTrackingData(
+            mockTrackingData.roomId,
+            null,
+            null
+        ).isNotEmpty() shouldBe true
     }
 
     "The application service should be able to get tracking data from a health professional id" {
         staffTrackingController.addTrackingData(mockTrackingData)
         staffTrackingController.getHealthProfessionalTrackingData(
             mockTrackingData.healthProfessionalId,
+            null,
             null
         ).isNotEmpty() shouldBe true
     }
@@ -58,7 +63,7 @@ class TestApplicationService : StringSpec({
             TrackingType.ENTER
         )
         staffTrackingController.addTrackingData(trackingData)
-        staffTrackingController.getLatestTrackingData(beforeInstant).isNotEmpty() shouldBe true
-        staffTrackingController.getLatestTrackingData(beforeInstant).first() shouldBe trackingData
+        staffTrackingController.getLatestTrackingData(beforeInstant, null).isNotEmpty() shouldBe true
+        staffTrackingController.getLatestTrackingData(beforeInstant, null).first() shouldBe trackingData
     }
 })
