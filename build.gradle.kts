@@ -35,6 +35,7 @@ dependencies {
     implementation(libs.ktor.server.swagger)
     implementation(libs.ktor.content.negotiation)
     implementation(libs.ktor.serialization)
+    implementation(libs.ktor.server.status.pages)
     implementation(libs.logback)
     testImplementation(libs.bundles.kotlin.testing)
 }
