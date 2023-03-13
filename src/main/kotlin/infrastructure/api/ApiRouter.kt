@@ -10,13 +10,17 @@ package infrastructure.api
 
 import application.controller.manager.StaffTrackingDatabaseManager
 import infrastructure.api.routes.trackingAPI
+import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.server.plugins.statuspages.StatusPages
+import io.ktor.server.response.respondText
 import io.ktor.server.routing.routing
+import java.time.format.DateTimeParseException
 
 /**
  * The API router of the application.
@@ -43,6 +47,7 @@ class ApiRouter(private val staffTrackingDatabaseManager: StaffTrackingDatabaseM
         with(app) {
             configureRouting()
             configureSerialization()
+            exceptionHandler()
         }
     }
 
@@ -61,6 +66,17 @@ class ApiRouter(private val staffTrackingDatabaseManager: StaffTrackingDatabaseM
     private fun Application.configureSerialization() {
         install(ContentNegotiation) {
             json()
+        }
+    }
+
+    private fun Application.exceptionHandler() {
+        install(StatusPages) {
+            exception<DateTimeParseException> { call, _ ->
+                call.respondText(
+                    text = "Date time information must be in ISO 8601 format",
+                    status = HttpStatusCode.BadRequest
+                )
+            }
         }
     }
 }
