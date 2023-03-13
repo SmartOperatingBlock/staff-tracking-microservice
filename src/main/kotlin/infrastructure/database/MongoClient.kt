@@ -10,11 +10,16 @@ package infrastructure.database
 
 import application.controller.manager.StaffTrackingDatabaseManager
 import application.presenter.database.TimeSeriesTrackingData
+import application.presenter.database.TimeSeriesTrackingDataMetadata
+import application.presenter.database.toTimeSeriesTrackingData
 import application.presenter.database.toTrackingData
+import com.mongodb.MongoException
 import entity.HealthProfessionalId
 import entity.RoomId
 import entity.TrackingData
+import entity.TrackingType
 import org.litote.kmongo.KMongo
+import org.litote.kmongo.div
 import org.litote.kmongo.getCollection
 import java.time.Instant
 
@@ -35,17 +40,6 @@ class MongoClient(
 
     private val trackingDataCollection =
         database.getCollection<TimeSeriesTrackingData>("tracking_data")
-
-//    override fun insertPatient(patient: Patient): Boolean =
-//        patientsCollection.insertOne(patient).run {
-//            getPatient(patient.taxCode) != null
-//        }
-//
-//    override fun deletePatient(taxCode: PatientData.TaxCode): Boolean =
-//        patientsCollection.deleteOne(Patient::taxCode eq taxCode).deletedCount > 0
-//
-//    override fun getPatient(taxCode: PatientData.TaxCode): Patient? =
-//        patientsCollection.findOne(Patient::taxCode eq taxCode)
 
     override fun addTrackingData(trackingData: TrackingData) =
         try {
@@ -80,13 +74,17 @@ class MongoClient(
             it.toTrackingData()
         }.toSet()
 
-    override fun getRoomTrackingData(roomId: RoomId, from: Instant?, to: Instant?): Set<TrackingData> {
-        TODO("Not yet implemented")
-    }
-
-    override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> {
-        TODO("Not yet implemented")
-    }
+    override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> =
+        if (from != null) {
+            trackingDataCollection.find()
+                .map {
+                    it.toTrackingData()
+                }.filter {
+                    it.dateTime.isAfter(from) && it.dateTime.isBefore(to)
+                }.toSet()
+        } else {
+            getBlockCurrentTrackingData()
+        }
 
     companion object {
         /**
