@@ -8,6 +8,9 @@
 
 package infrastructure.api.util
 
+import kotlinx.serialization.Serializable
+
 /** The API response in case of multiple data in API response.
  *  The API returns a list of [entries] and the [total] number of elements . */
+@Serializable
 data class ResponseEntryList<out T>(val entries: List<T>, val total: Int = entries.count())
