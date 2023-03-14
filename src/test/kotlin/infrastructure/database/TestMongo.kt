@@ -24,6 +24,12 @@ class TestMongo : StringSpec({
         HealthProfessionalId("hp1"),
         TrackingType.ENTER
     )
+    val trackingDataWithExitType = TrackingData(
+        Instant.now().plusSeconds(100),
+        RoomId("room1"),
+        HealthProfessionalId("hp1"),
+        TrackingType.EXIT
+    )
 
     "Test tracking data creation on mongo db" {
         withMongo {
@@ -56,6 +62,32 @@ class TestMongo : StringSpec({
             mongoClient.getRoomTrackingData(RoomId("room1"), null, null).also {
                 it shouldNotBe null
                 it.first().roomId.id shouldBe trackingDataWithEnterType.roomId.id
+            }
+        }
+    }
+
+    "Test get latest tracking data without time specified with person inside" {
+        withMongo {
+            val mongoClient = MongoClient("mongodb://localhost:27017").also {
+                it.database.drop()
+            }
+            mongoClient.addTrackingData(trackingDataWithEnterType)
+            mongoClient.getLatestTrackingData(null, null).also {
+                it shouldNotBe null
+                it.first().healthProfessionalId.id shouldBe trackingDataWithEnterType.healthProfessionalId.id
+            }
+        }
+    }
+
+    "Test get latest tracking data without time specified without person inside" {
+        withMongo {
+            val mongoClient = MongoClient("mongodb://localhost:27017").also {
+                it.database.drop()
+            }
+            mongoClient.addTrackingData(trackingDataWithEnterType)
+            mongoClient.addTrackingData(trackingDataWithExitType)
+            mongoClient.getLatestTrackingData(null, null).also {
+                it shouldBe emptySet()
             }
         }
     }
