@@ -15,6 +15,8 @@ import java.time.Instant
 
 class TestTrackingData : StringSpec({
 
+    val oldIstant = Instant.now()
+
     "Tracking data should not have empty room id" {
         shouldThrow<IllegalArgumentException> {
             RoomId("")
@@ -30,7 +32,7 @@ class TestTrackingData : StringSpec({
     "Tracking events with same room id and health professional id should not be equals" {
         val roomId = RoomId("room#1")
         val healthProfessionalId = HealthProfessionalId("12345678")
-        TrackingData(Instant.now(), roomId, healthProfessionalId, TrackingType.ENTER) shouldNotBe
+        TrackingData(oldIstant, roomId, healthProfessionalId, TrackingType.ENTER) shouldNotBe
             TrackingData(Instant.now(), roomId, healthProfessionalId, TrackingType.ENTER)
     }
 })
