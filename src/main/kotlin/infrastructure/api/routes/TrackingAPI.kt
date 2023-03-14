@@ -35,9 +35,9 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             StaffTrackingController(databaseManager)
         ).execute().map { data ->
             data.toTrackingDataApiDto()
-        }.toList().run {
-            call.response.status(if (this.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
-            call.respond(ResponseEntryList(this))
+        }.toList().also { list ->
+            call.response.status(if (list.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
+            call.respond(ResponseEntryList(list))
         }
     }
 
@@ -56,11 +56,12 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
     }
 
     get("$apiPath/block-tracking-data") {
-        TrackingServices.GetLatestTrackingData(
+        val currentBlockTrackingData = TrackingServices.GetLatestTrackingData(
             call.request.queryParameters["from"]?.toDateTime(),
             call.request.queryParameters["to"]?.toDateTime(),
             StaffTrackingController(databaseManager)
-        ).execute().map { data ->
+        ).execute()
+        currentBlockTrackingData.map { data ->
             data.toTrackingDataApiDto()
         }.toList().run {
             call.response.status(if (this.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
