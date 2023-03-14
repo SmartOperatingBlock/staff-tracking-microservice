@@ -1,3 +1,112 @@
+## 1.0.0 (2023-03-14)
+
+
+### Features
+
+* create application service interface ([4af9229](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/4af9229637c9f224f4583a3024e6b6fe98044997))
+* create event consumer interface ([83d5f94](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/83d5f94bc936c61a193c3e58ffd030936e95e95e))
+* create provider interface ([e5accd9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e5accd97c4facdd9daff440508f4d8ce12565bb5))
+* create tracking data repository interface ([b5e7555](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/b5e75553fcd3f85820d07be55ad297d06f2d6c42))
+* **entity:** create tracking data entity ([3d5e7d2](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/3d5e7d23b6fb07685f03305c6520c40b74165235))
+* implement addtrackingData query ([93b573e](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/93b573ea25af7bad86f81f7b69b70fec4a4ec63c))
+* implement getHealthProfessionalTrackingData query ([c2ad650](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c2ad65055610068eef0c6c3f99c2c900b52c1306))
+* implement getLatestTrackingData query ([ee7f4f6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ee7f4f6440fea1177a85b1859ee33e4a8921c002))
+* implement mongo client ([293c6ba](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/293c6ba77dffc65e2b80e8b775dcfb9d10e66eb5))
+
+
+### Bug Fixes
+
+* correct wrong parameter in entities test ([bf86b39](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/bf86b393a24d97ef694438d376ed769ce65f2dda))
+* fix group by in getBlockCurrentTrackingData function ([12a1a86](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/12a1a8687ef6f056784f4a82c21afa72e9493cd8))
+* remove useless extension method due to serialization problems ([920bb6e](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/920bb6ec63a1c7b314935a217103edee5f71d1af))
+* remove wrong parameter in api router ([252c8e2](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/252c8e2da3ecc9c33004fcb707866b371a8d7862))
+
+
+### Refactoring
+
+* move event dto to model package ([e6687f3](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e6687f34c65c9176e425ffb1ba6b55a0b525578c))
+
+
+### Documentation
+
+* **openapi:** add open api documentation ([a6e1c11](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/a6e1c116d9a41ec3ca019c5df8a3b0c1d6a42f84))
+* **openapi:** add to parameters in tracking api ([104a5ae](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/104a5ae33dda3b00ad6aff289214523211bc27c5))
+
+
+### Dependency updates
+
+* **deps:** add deps to build file ([eb971e9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/eb971e99f88ecde7b1bce4ee48b6a18742f2af47))
+* **deps:** add ktor, kafka and kmongo dependencies ([f438afb](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f438afb7f70562d60b4e23cef2eefbe3e10124d1))
+* **deps:** add status page deps ([6e435d7](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/6e435d7a92463e2616fde983a641194b9f68d375))
+* **deps:** update node.js to 18.15 ([8ce855e](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/8ce855ebae2d39aeecfe9cb0284ac398fc849aef))
+* **deps:** update plugin com.gradle.enterprise to v3.12.4 ([7fbd8a6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/7fbd8a65baf43e75c0a32e85fc15f521340288c1))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.5 ([23c6230](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/23c6230c94b7b4b71148076026fcff6d6fd35a9e))
+
+
+### General maintenance
+
+* add api router to launcher ([1fa4a24](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/1fa4a24be35d2172525b05b5d1815634e9b5b12a))
+* add application launcher ([f7d9678](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f7d9678a4e3d5107cc3d5c0484399dd103e74be6))
+* add control in event deserialization ([47810ff](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/47810ffdacec8b80f5ea10a1e6696eeda5b244a3))
+* add control on datetime parsing in api router ([fa238b6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/fa238b66b94d1465aa23937930f0c8557fedc88d))
+* add equals and hascode to entities ([41a0f81](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/41a0f810dbc613c67a7ee8a1e219ddb92f7a795c))
+* add kmongo dep ([d4e80b4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d4e80b497bdaf42b3795624ca95427071e464509))
+* add method to load kafka properties ([f64bf73](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f64bf73a05ddf95bd1b0286e632bd06d0fd53b33))
+* add provider implementation ([c231926](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c2319264edd0eb66ad4a3b10e89d938a74e9c9bd))
+* add run task to build file ([ec4c007](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ec4c007742405177cefbac91890dff6cb738f11a))
+* add run task to dockerfile ([25e6aeb](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/25e6aeb0a3a728fdfde7528dddecd3f7eadaf115))
+* add to parameter to specify tracking data time range ([15861c5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/15861c5b757dcf77ce157899a61fe3f2b4473f11))
+* add utility class to test api ([59b0622](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/59b06229e273593de03b6880aac3d34aefc1bac1))
+* change api path ([3ae9726](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/3ae9726a215396eb3dfd2cc52d65f7b0feace88a))
+* change consumer group name ([e20cd17](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e20cd1727a4e8c67f1246e08b83d36ebc0e12cda))
+* change project name ([c4345b5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c4345b5dc89f83469df3a13bf24a9359c8bafb3f))
+* change type of tracking data datetime ([68fab81](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/68fab8134aa44b52a2ed8a53cfc3800c63c6c735))
+* correct api path and add mapping to dto ([761adf7](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/761adf7213cf559fff3a184b4316333d06006ec9))
+* create api dto ([ab1725e](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ab1725e1f8a6960d9c88a0531b8a7ec4fc0c6b4b))
+* create dto for database operations ([300b774](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/300b7740cece6721188303ca5b09e42d45f4379c))
+* create extension function to convert event dto to entity ([520afd9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/520afd9c1932fb9b31203fdfb509be04ae9cf5d2))
+* create function to remove redundant code ([f529690](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f529690d699afba59405adf03561773156cb20f6))
+* create Kafka client ([f6d9deb](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f6d9deb804f991d50d0b68320c0fa5a7467f16b5))
+* create method to retrun a list of elements in api ([1d95464](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/1d9546499b58f3ce713b2528be57ada06503a911))
+* create mock db manager for application services tests ([2cd7861](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/2cd7861de0e87b1530973a32f868e3cc6d150bd7))
+* create tracking application services ([6cfba5f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/6cfba5f29ffa6d403fca4575790091963dadce47))
+* create tracking data event dto ([ffe2aee](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ffe2aeefcd879df077e790cd0775619b850a42a7))
+* delete sample test class ([2996ba4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/2996ba4b9b18341ea8371b5483782a771094c2f5))
+* delete unused imports ([41bb653](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/41bb653f91bce5c9b6270c196642d330fde7a67e))
+* delete useless comments ([d0ed422](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d0ed4222e2fcd3aaac479469a79c2dabcd7401c4))
+* delete useless dependencies ([d370314](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d370314c6ec609927f12277a884794adc578c6cf))
+* implement api router ([1765ca9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/1765ca9cdc9730f8d7f241a3444f721d7d2e3f6a))
+* implement controller ([ae5d194](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ae5d194e1756051afc8a7909ad992ec0bf3135aa))
+* implement tracking API ([e8c8faa](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e8c8faad87a213531521b3ae8f5a1e2f4afb907a))
+* make api router start before kafka consumer ([122a722](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/122a722ef133ec5e9ebdfe6b4569afc6e877ab1a))
+* mark api response as serializable ([0d3e65f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/0d3e65f8dc6c4ff44c33b1832bd2bdbff44b54f3))
+* rename mongo test utility ([68aa90c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/68aa90c57707e1fce85816b1484227a83c6ebac4))
+* start kafka before ktor ([9000089](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/9000089f4cb746a86dc6c4e40056de154d342780))
+* update readme ([c3ab178](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c3ab178f72784f15dfffc97b7a33fd86d854e12f))
+* update readme with sonarcloud badges and documentation links ([bd39d96](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/bd39d961ee98665581ec83721ed9f20188ac6b6b))
+* use controller instead of repository ([097fa38](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/097fa3839752ec9db2cc033c054d6aa2c0593952))
+* use repository interface instead of db manager ([5c16b32](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5c16b325dcc591a1e61e89c933599464973a17a2))
+
+
+### Tests
+
+* add mongo test utility ([d1072cd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d1072cd66b4559440002888f279d5c399160cc56))
+* add some test for mongodb query ([cb25fd5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/cb25fd5759bf838eef860fd475c15c8058382ed2))
+* add test for mongo query ([f036d22](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f036d22e89323c2ab9df56bd486d678b66731740))
+* add to parameter to specify tracking data time range ([692d4b9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/692d4b9e7bc198d671acde1d072123ba49c48ac7))
+* **api:** add api serialization test ([5f6ae6f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5f6ae6fa9db6b6fe03b15baea919ee9d0084022a))
+* **api:** add some api tests ([e97aba5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e97aba578168bf814bded216cda1de76b61ae037))
+* **application:** add application service tests ([d6e3ff4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d6e3ff44807488d340227b31ce704237661882c0))
+* **application:** add database serialization test ([17eb8cd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/17eb8cdfbd077fd9d05d155bcf75d4f750a9e4d6))
+* **architecture:** add clean architecture test ([594de16](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/594de164434acd270a5f6b65902a986a482329f7))
+* **entity:** add entities test ([369cc7e](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/369cc7ef115eb4964b47285d2927e00b4e043b83))
+
+
+### Style improvements
+
+* fix style warnings ([db97b20](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/db97b208a5d6b6e00aa0949119163a061336d8ad))
+* resolve cpd warning ([4af5fd6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/4af5fd6499ea009bd6429c0fdb69f88187bd92c2))
+
 ## [0.1.2](https://github.com/SmartOperatingBlock/kotlin-template-project/compare/0.1.1...0.1.2) (2023-03-05)
 
 
