@@ -39,7 +39,7 @@ class ApiRouter(private val staffTrackingDatabaseManager: StaffTrackingDatabaseM
     fun start() {
         embeddedServer(Netty, port = NETTY_PORT) {
             module(this)
-        }.start(wait = true)
+        }.start(wait = false)
     }
 
     /** The KTor Application module. */
