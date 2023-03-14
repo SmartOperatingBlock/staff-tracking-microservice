@@ -16,7 +16,6 @@ import entity.HealthProfessionalId
 import entity.RoomId
 import infrastructure.api.util.ResponseEntryList
 import io.ktor.http.HttpStatusCode
-import io.ktor.server.application.ApplicationCall
 import io.ktor.server.application.call
 import io.ktor.server.response.respond
 import io.ktor.server.routing.Route
@@ -29,45 +28,43 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
     fun String.toDateTime(): Instant = Instant.parse(this)
 
     get("$apiPath/health-professionals-tracking-data/{healthProfessionalId}") {
-        val responseEntryList = TrackingServices.GetHealthProfessionalTrackingData(
+        TrackingServices.GetHealthProfessionalTrackingData(
             HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
             call.request.queryParameters["from"]?.toDateTime(),
             call.request.queryParameters["to"]?.toDateTime(),
             StaffTrackingController(databaseManager)
         ).execute().map { data ->
             data.toTrackingDataApiDto()
-        }.toList()
-        call.respondWithList(responseEntryList)
+        }.toList().run {
+            call.response.status(if (this.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
+            call.respond(ResponseEntryList(this))
+        }
     }
 
     get("$apiPath/rooms-tracking-data/{roomId}") {
-        call.respondWithList(
-            TrackingServices.GetRoomTrackingData(
-                RoomId(call.parameters["roomId"].orEmpty()),
-                call.request.queryParameters["from"]?.toDateTime(),
-                call.request.queryParameters["to"]?.toDateTime(),
-                StaffTrackingController(databaseManager)
-            ).execute().map { data ->
-                data.toTrackingDataApiDto()
-            }.toList()
-        )
+        TrackingServices.GetRoomTrackingData(
+            RoomId(call.parameters["roomId"].orEmpty()),
+            call.request.queryParameters["from"]?.toDateTime(),
+            call.request.queryParameters["to"]?.toDateTime(),
+            StaffTrackingController(databaseManager)
+        ).execute().map { data ->
+            data.toTrackingDataApiDto()
+        }.toList().run {
+            call.response.status(if (this.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
+            call.respond(ResponseEntryList(this))
+        }
     }
 
     get("$apiPath/block-tracking-data") {
-        call.respondWithList(
-            TrackingServices.GetLatestTrackingData(
-                call.request.queryParameters["from"]?.toDateTime(),
-                call.request.queryParameters["to"]?.toDateTime(),
-                StaffTrackingController(databaseManager)
-            ).execute().map { data ->
-                data.toTrackingDataApiDto()
-            }.toList()
-        )
+        TrackingServices.GetLatestTrackingData(
+            call.request.queryParameters["from"]?.toDateTime(),
+            call.request.queryParameters["to"]?.toDateTime(),
+            StaffTrackingController(databaseManager)
+        ).execute().map { data ->
+            data.toTrackingDataApiDto()
+        }.toList().run {
+            call.response.status(if (this.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
+            call.respond(ResponseEntryList(this))
+        }
     }
-}
-
-/** Create the API response given the [list] of elements. */
-suspend fun <T> ApplicationCall.respondWithList(list: List<T>) {
-    this.response.status(if (list.isEmpty()) HttpStatusCode.NoContent else HttpStatusCode.OK)
-    this.respond(ResponseEntryList(list))
 }
