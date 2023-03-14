@@ -1,0 +1,145 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/staff-tracking-microservice/[root]/index.html
+$dokka.location://main/#/PointingToDeclaration/staff-tracking-microservice/[root]/main.html
+$dokka.location:application.controller.manager////PointingToDeclaration/staff-tracking-microservice/application.controller.manager/index.html
+$dokka.location:application.controller.manager/StaffTrackingDatabaseManager///PointingToDeclaration/staff-tracking-microservice/application.controller.manager/-staff-tracking-database-manager/index.html
+$dokka.location:application.controller.manager/StaffTrackingDatabaseManager/addTrackingData/#entity.TrackingData/PointingToDeclaration/staff-tracking-microservice/application.controller.manager/-staff-tracking-database-manager/add-tracking-data.html
+$dokka.location:application.controller.manager/StaffTrackingDatabaseManager/getHealthProfessionalTrackingData/#entity.HealthProfessionalId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller.manager/-staff-tracking-database-manager/get-health-professional-tracking-data.html
+$dokka.location:application.controller.manager/StaffTrackingDatabaseManager/getLatestTrackingData/#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller.manager/-staff-tracking-database-manager/get-latest-tracking-data.html
+$dokka.location:application.controller.manager/StaffTrackingDatabaseManager/getRoomTrackingData/#entity.RoomId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller.manager/-staff-tracking-database-manager/get-room-tracking-data.html
+$dokka.location:application.controller////PointingToDeclaration/staff-tracking-microservice/application.controller/index.html
+$dokka.location:application.controller/StaffTrackingController///PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/index.html
+$dokka.location:application.controller/StaffTrackingController/StaffTrackingController/#application.controller.manager.StaffTrackingDatabaseManager/PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/-staff-tracking-controller.html
+$dokka.location:application.controller/StaffTrackingController/addTrackingData/#entity.TrackingData/PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/add-tracking-data.html
+$dokka.location:application.controller/StaffTrackingController/getHealthProfessionalTrackingData/#entity.HealthProfessionalId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/get-health-professional-tracking-data.html
+$dokka.location:application.controller/StaffTrackingController/getLatestTrackingData/#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/get-latest-tracking-data.html
+$dokka.location:application.controller/StaffTrackingController/getRoomTrackingData/#entity.RoomId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/application.controller/-staff-tracking-controller/get-room-tracking-data.html
+$dokka.location:application.presenter.api////PointingToDeclaration/staff-tracking-microservice/application.presenter.api/index.html
+$dokka.location:application.presenter.api//toTrackingDataApiDto/entity.TrackingData#/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/to-tracking-data-api-dto.html
+$dokka.location:application.presenter.api/TrackingDataApiDto///PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/index.html
+$dokka.location:application.presenter.api/TrackingDataApiDto/TrackingDataApiDto/#kotlin.String#kotlin.String#kotlin.String#entity.TrackingType/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/-tracking-data-api-dto.html
+$dokka.location:application.presenter.api/TrackingDataApiDto/dateTime/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/date-time.html
+$dokka.location:application.presenter.api/TrackingDataApiDto/healthProfessionalId/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/health-professional-id.html
+$dokka.location:application.presenter.api/TrackingDataApiDto/roomId/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/room-id.html
+$dokka.location:application.presenter.api/TrackingDataApiDto/trackingType/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.api/-tracking-data-api-dto/tracking-type.html
+$dokka.location:application.presenter.database////PointingToDeclaration/staff-tracking-microservice/application.presenter.database/index.html
+$dokka.location:application.presenter.database//toTimeSeriesTrackingData/entity.TrackingData#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/to-time-series-tracking-data.html
+$dokka.location:application.presenter.database//toTrackingData/application.presenter.database.TimeSeriesTrackingData#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/to-tracking-data.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingData///PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data/index.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingData/TimeSeriesTrackingData/#java.time.Instant#application.presenter.database.TimeSeriesTrackingDataMetadata#kotlin.String/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data/-time-series-tracking-data.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingData/dateTime/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data/date-time.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingData/metadata/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data/metadata.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingData/trackingType/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data/tracking-type.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingDataMetadata///PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data-metadata/index.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingDataMetadata/TimeSeriesTrackingDataMetadata/#kotlin.String#kotlin.String/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data-metadata/-time-series-tracking-data-metadata.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingDataMetadata/healthProfessionalId/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data-metadata/health-professional-id.html
+$dokka.location:application.presenter.database/TimeSeriesTrackingDataMetadata/roomId/#/PointingToDeclaration/staff-tracking-microservice/application.presenter.database/-time-series-tracking-data-metadata/room-id.html
+$dokka.location:application.service////PointingToDeclaration/staff-tracking-microservice/application.service/index.html
+$dokka.location:application.service/ApplicationService///PointingToDeclaration/staff-tracking-microservice/application.service/-application-service/index.html
+$dokka.location:application.service/ApplicationService/execute/#/PointingToDeclaration/staff-tracking-microservice/application.service/-application-service/execute.html
+$dokka.location:application.service/TrackingServices.AddTrackingData///PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-add-tracking-data/index.html
+$dokka.location:application.service/TrackingServices.AddTrackingData/AddTrackingData/#entity.TrackingData#usecase.repository.TrackingDataRepository/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-add-tracking-data/-add-tracking-data.html
+$dokka.location:application.service/TrackingServices.AddTrackingData/execute/#/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-add-tracking-data/execute.html
+$dokka.location:application.service/TrackingServices.GetHealthProfessionalTrackingData///PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-health-professional-tracking-data/index.html
+$dokka.location:application.service/TrackingServices.GetHealthProfessionalTrackingData/GetHealthProfessionalTrackingData/#entity.HealthProfessionalId#java.time.Instant?#java.time.Instant?#usecase.repository.TrackingDataRepository/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-health-professional-tracking-data/-get-health-professional-tracking-data.html
+$dokka.location:application.service/TrackingServices.GetHealthProfessionalTrackingData/execute/#/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-health-professional-tracking-data/execute.html
+$dokka.location:application.service/TrackingServices.GetLatestTrackingData///PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-latest-tracking-data/index.html
+$dokka.location:application.service/TrackingServices.GetLatestTrackingData/GetLatestTrackingData/#java.time.Instant?#java.time.Instant?#usecase.repository.TrackingDataRepository/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-latest-tracking-data/-get-latest-tracking-data.html
+$dokka.location:application.service/TrackingServices.GetLatestTrackingData/execute/#/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-latest-tracking-data/execute.html
+$dokka.location:application.service/TrackingServices.GetRoomTrackingData///PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-room-tracking-data/index.html
+$dokka.location:application.service/TrackingServices.GetRoomTrackingData/GetRoomTrackingData/#entity.RoomId#java.time.Instant?#java.time.Instant?#usecase.repository.TrackingDataRepository/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-room-tracking-data/-get-room-tracking-data.html
+$dokka.location:application.service/TrackingServices.GetRoomTrackingData/execute/#/PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/-get-room-tracking-data/execute.html
+$dokka.location:application.service/TrackingServices///PointingToDeclaration/staff-tracking-microservice/application.service/-tracking-services/index.html
+$dokka.location:entity////PointingToDeclaration/staff-tracking-microservice/entity/index.html
+$dokka.location:entity/HealthProfessionalId///PointingToDeclaration/staff-tracking-microservice/entity/-health-professional-id/index.html
+$dokka.location:entity/HealthProfessionalId/HealthProfessionalId/#kotlin.String/PointingToDeclaration/staff-tracking-microservice/entity/-health-professional-id/-health-professional-id.html
+$dokka.location:entity/HealthProfessionalId/id/#/PointingToDeclaration/staff-tracking-microservice/entity/-health-professional-id/id.html
+$dokka.location:entity/RoomId///PointingToDeclaration/staff-tracking-microservice/entity/-room-id/index.html
+$dokka.location:entity/RoomId/RoomId/#kotlin.String/PointingToDeclaration/staff-tracking-microservice/entity/-room-id/-room-id.html
+$dokka.location:entity/RoomId/id/#/PointingToDeclaration/staff-tracking-microservice/entity/-room-id/id.html
+$dokka.location:entity/TrackingData///PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/index.html
+$dokka.location:entity/TrackingData/TrackingData/#java.time.Instant#entity.RoomId#entity.HealthProfessionalId#entity.TrackingType/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/-tracking-data.html
+$dokka.location:entity/TrackingData/dateTime/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/date-time.html
+$dokka.location:entity/TrackingData/equals/#kotlin.Any?/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/equals.html
+$dokka.location:entity/TrackingData/hashCode/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/hash-code.html
+$dokka.location:entity/TrackingData/healthProfessionalId/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/health-professional-id.html
+$dokka.location:entity/TrackingData/roomId/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/room-id.html
+$dokka.location:entity/TrackingData/trackingType/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-data/tracking-type.html
+$dokka.location:entity/TrackingType.ENTER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}staff-tracking-microservice/entity/-tracking-type/-e-n-t-e-r/index.html
+$dokka.location:entity/TrackingType.EXIT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}staff-tracking-microservice/entity/-tracking-type/-e-x-i-t/index.html
+$dokka.location:entity/TrackingType///PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/index.html
+$dokka.location:entity/TrackingType/valueOf/#kotlin.String/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/value-of.html
+$dokka.location:entity/TrackingType/values/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/values.html
+$dokka.location:infrastructure.api.routes////PointingToDeclaration/staff-tracking-microservice/infrastructure.api.routes/index.html
+$dokka.location:infrastructure.api.routes//trackingAPI/io.ktor.server.routing.Route#application.controller.manager.StaffTrackingDatabaseManager#kotlin.String/PointingToDeclaration/staff-tracking-microservice/infrastructure.api.routes/tracking-a-p-i.html
+$dokka.location:infrastructure.api.util////PointingToDeclaration/staff-tracking-microservice/infrastructure.api.util/index.html
+$dokka.location:infrastructure.api.util/ResponseEntryList///PointingToDeclaration/staff-tracking-microservice/infrastructure.api.util/-response-entry-list/index.html
+$dokka.location:infrastructure.api.util/ResponseEntryList/ResponseEntryList/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#kotlin.Int/PointingToDeclaration/staff-tracking-microservice/infrastructure.api.util/-response-entry-list/-response-entry-list.html
+$dokka.location:infrastructure.api.util/ResponseEntryList/entries/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.api.util/-response-entry-list/entries.html
+$dokka.location:infrastructure.api.util/ResponseEntryList/total/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.api.util/-response-entry-list/total.html
+$dokka.location:infrastructure.api////PointingToDeclaration/staff-tracking-microservice/infrastructure.api/index.html
+$dokka.location:infrastructure.api/ApiRouter.Companion///PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/-companion/index.html
+$dokka.location:infrastructure.api/ApiRouter.Companion/NETTY_PORT/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/-companion/-n-e-t-t-y_-p-o-r-t.html
+$dokka.location:infrastructure.api/ApiRouter///PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/index.html
+$dokka.location:infrastructure.api/ApiRouter/ApiRouter/#application.controller.manager.StaffTrackingDatabaseManager/PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/-api-router.html
+$dokka.location:infrastructure.api/ApiRouter/module/#io.ktor.server.application.Application/PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/module.html
+$dokka.location:infrastructure.api/ApiRouter/start/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.api/-api-router/start.html
+$dokka.location:infrastructure.database////PointingToDeclaration/staff-tracking-microservice/infrastructure.database/index.html
+$dokka.location:infrastructure.database/MongoClient.Companion///PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/-companion/index.html
+$dokka.location:infrastructure.database/MongoClient.Companion/databaseName/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/-companion/database-name.html
+$dokka.location:infrastructure.database/MongoClient///PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/index.html
+$dokka.location:infrastructure.database/MongoClient/MongoClient/#kotlin.String/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/-mongo-client.html
+$dokka.location:infrastructure.database/MongoClient/addTrackingData/#entity.TrackingData/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/add-tracking-data.html
+$dokka.location:infrastructure.database/MongoClient/database/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/database.html
+$dokka.location:infrastructure.database/MongoClient/getHealthProfessionalTrackingData/#entity.HealthProfessionalId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/get-health-professional-tracking-data.html
+$dokka.location:infrastructure.database/MongoClient/getLatestTrackingData/#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/get-latest-tracking-data.html
+$dokka.location:infrastructure.database/MongoClient/getRoomTrackingData/#entity.RoomId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/infrastructure.database/-mongo-client/get-room-tracking-data.html
+$dokka.location:infrastructure.events.model////PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/index.html
+$dokka.location:infrastructure.events.model//toTrackingData/infrastructure.events.model.TrackingEventDto#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/to-tracking-data.html
+$dokka.location:infrastructure.events.model/TrackingEventDto///PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/index.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/TrackingEventDto/#kotlin.String#kotlin.String#kotlin.String#kotlin.Boolean#kotlin.String/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/-tracking-event-dto.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/data/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/data.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/dateTime/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/date-time.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/healthProfessionalId/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/health-professional-id.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/key/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/key.html
+$dokka.location:infrastructure.events.model/TrackingEventDto/roomId/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events.model/-tracking-event-dto/room-id.html
+$dokka.location:infrastructure.events////PointingToDeclaration/staff-tracking-microservice/infrastructure.events/index.html
+$dokka.location:infrastructure.events//loadConsumerProperties/infrastructure.events.KafkaClient#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/load-consumer-properties.html
+$dokka.location:infrastructure.events/EventConsumer///PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-event-consumer/index.html
+$dokka.location:infrastructure.events/EventConsumer/consume/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-event-consumer/consume.html
+$dokka.location:infrastructure.events/EventConsumer/start/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-event-consumer/start.html
+$dokka.location:infrastructure.events/KafkaClient.Companion///PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/-companion/index.html
+$dokka.location:infrastructure.events/KafkaClient.Companion/pollingTime/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/-companion/polling-time.html
+$dokka.location:infrastructure.events/KafkaClient.Companion/topic/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/-companion/topic.html
+$dokka.location:infrastructure.events/KafkaClient///PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/index.html
+$dokka.location:infrastructure.events/KafkaClient/KafkaClient/#application.controller.manager.StaffTrackingDatabaseManager/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/-kafka-client.html
+$dokka.location:infrastructure.events/KafkaClient/consume/#infrastructure.events.model.TrackingEventDto/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/consume.html
+$dokka.location:infrastructure.events/KafkaClient/start/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.events/-kafka-client/start.html
+$dokka.location:infrastructure.provider////PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/index.html
+$dokka.location:infrastructure.provider/Provider///PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/-provider/index.html
+$dokka.location:infrastructure.provider/Provider/staffTrackingDatabaseManager/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/-provider/staff-tracking-database-manager.html
+$dokka.location:infrastructure.provider/ProviderImpl///PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/-provider-impl/index.html
+$dokka.location:infrastructure.provider/ProviderImpl/ProviderImpl/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/-provider-impl/-provider-impl.html
+$dokka.location:infrastructure.provider/ProviderImpl/staffTrackingDatabaseManager/#/PointingToDeclaration/staff-tracking-microservice/infrastructure.provider/-provider-impl/staff-tracking-database-manager.html
+$dokka.location:usecase.repository////PointingToDeclaration/staff-tracking-microservice/usecase.repository/index.html
+$dokka.location:usecase.repository/TrackingDataRepository///PointingToDeclaration/staff-tracking-microservice/usecase.repository/-tracking-data-repository/index.html
+$dokka.location:usecase.repository/TrackingDataRepository/addTrackingData/#entity.TrackingData/PointingToDeclaration/staff-tracking-microservice/usecase.repository/-tracking-data-repository/add-tracking-data.html
+$dokka.location:usecase.repository/TrackingDataRepository/getHealthProfessionalTrackingData/#entity.HealthProfessionalId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/usecase.repository/-tracking-data-repository/get-health-professional-tracking-data.html
+$dokka.location:usecase.repository/TrackingDataRepository/getLatestTrackingData/#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/usecase.repository/-tracking-data-repository/get-latest-tracking-data.html
+$dokka.location:usecase.repository/TrackingDataRepository/getRoomTrackingData/#entity.RoomId#java.time.Instant?#java.time.Instant?/PointingToDeclaration/staff-tracking-microservice/usecase.repository/-tracking-data-repository/get-room-tracking-data.html
+application.controller
+application.controller.manager
+application.presenter.api
+application.presenter.database
+application.service
+entity
+infrastructure.api
+infrastructure.api.routes
+infrastructure.api.util
+infrastructure.database
+infrastructure.events
+infrastructure.events.model
+infrastructure.provider
+usecase.repository
+
