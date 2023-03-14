@@ -10,7 +10,6 @@ package infrastructure.database
 
 import application.controller.manager.StaffTrackingDatabaseManager
 import application.presenter.database.TimeSeriesTrackingData
-import application.presenter.database.TimeSeriesTrackingDataMetadata
 import application.presenter.database.toTimeSeriesTrackingData
 import application.presenter.database.toTrackingData
 import com.mongodb.MongoException
@@ -20,7 +19,6 @@ import entity.RoomId
 import entity.TrackingData
 import entity.TrackingType
 import org.litote.kmongo.KMongo
-import org.litote.kmongo.div
 import org.litote.kmongo.getCollection
 import java.time.Instant
 
@@ -67,9 +65,9 @@ class MongoClient(
             it.roomId == roomId
         }.toSet()
 
-    private fun getBlockCurrentTrackingData(): Set<TrackingData> =
-        trackingDataCollection.find().groupBy {
-            TimeSeriesTrackingData::metadata / TimeSeriesTrackingDataMetadata::healthProfessionalId
+    private fun getBlockCurrentTrackingData(): Set<TrackingData> {
+        return trackingDataCollection.find().groupBy {
+            it.metadata.healthProfessionalId
         }.map {
             it.value.sortedByDescending { list -> list.dateTime }.first()
         }.filter {
@@ -77,6 +75,7 @@ class MongoClient(
         }.map {
             it.toTrackingData()
         }.toSet()
+    }
 
     override fun getLatestTrackingData(from: Instant?, to: Instant?): Set<TrackingData> =
         if (from != null) {
