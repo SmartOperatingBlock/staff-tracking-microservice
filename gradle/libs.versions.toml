@@ -1,6 +1,6 @@
 [versions]
 confluent = "7.3.1"
-kafka = "3.3.2"
+kafka = "5.5.14-ce"
 kmongo = "4.8.0"
 kotest = "5.5.5"
 kotlin = "1.8.10"
