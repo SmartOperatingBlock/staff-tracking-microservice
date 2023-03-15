@@ -14,9 +14,9 @@ info:
 
 tags:
   - name: Health Professionals Tracking API
-    description: This is the available API to obtain information about health professionals movements.
+    description: This is the available API to obtain information about a specific health professional position.
   - name: Room Tracking API
-    description: This is the available API to obtain information about health professionals within an operating block room.
+    description: This is the available API to obtain information about health professionals that are inside an Operating Block room.
   - name: Block Tracking API
     description: This is the available API to obtain information about current health professionals within the operating block.
 
