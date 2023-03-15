@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.0...1.0.1) (2023-03-15)
+
+
+### Build and continuous integration
+
+* add input for openapi documentation generation ([666db8b](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/666db8b91dd37c0950c8f110c01c70912617be3f))
+
+
+### Documentation
+
+* **api:** improve api explanation ([375c9c9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/375c9c9bacee49c2c548af4882d76fdcd65a8e39))
+
 ## 1.0.0 (2023-03-14)
 
 
