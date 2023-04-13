@@ -25,7 +25,7 @@ interface TrackingDataRepository {
     fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
         from: Instant?,
-        to: Instant?
+        to: Instant?,
     ): Set<TrackingData>
 
     /** Get the room tracking data given its [roomId].

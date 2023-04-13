@@ -43,7 +43,7 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
                     try {
                         val trackingEvent = jacksonObjectMapper().convertValue(
                             event.value(),
-                            TrackingEventDto::class.java
+                            TrackingEventDto::class.java,
                         )
                         consume(trackingEvent)
                     } catch (e: IllegalArgumentException) {
@@ -52,7 +52,7 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
                             Invalid Event Schema!
                             Check out the events API here:
                              https://smartoperatingblock.github.io/dt-event-gateway/documentation/asyncapi-doc
-                            """.trimIndent() + e
+                            """.trimIndent() + e,
                         )
                     }
                 }
@@ -66,6 +66,7 @@ class KafkaClient(private val dbManager: StaffTrackingDatabaseManager) : EventCo
     companion object {
         /** The topic on which consume tracking events. */
         const val topic = "tracking-events"
+
         /** The polling time. */
         const val pollingTime: Long = 250
     }

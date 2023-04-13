@@ -16,5 +16,5 @@ fun KafkaClient.loadConsumerProperties(): Map<String, Any> = mapOf(
     "schema.registry.url" to System.getenv("SCHEMA_REGISTRY_URL"),
     "group.id" to "tracking-data-consumer",
     "key.deserializer" to "org.apache.kafka.common.serialization.StringDeserializer",
-    "value.deserializer" to KafkaJsonDeserializer::class.java
+    "value.deserializer" to KafkaJsonDeserializer::class.java,
 )

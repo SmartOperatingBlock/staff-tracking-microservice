@@ -23,7 +23,7 @@ data class TrackingEventDto(
     val healthProfessionalId: String,
     val roomId: String,
     val data: Boolean,
-    val dateTime: String
+    val dateTime: String,
 )
 
 /** Extension function to convert the event to a [TrackingData]. */
@@ -32,5 +32,5 @@ fun TrackingEventDto.toTrackingData(): TrackingData =
         dateTime = Instant.parse(this.dateTime),
         roomId = RoomId(this.roomId),
         healthProfessionalId = HealthProfessionalId(this.healthProfessionalId),
-        trackingType = if (this.data) TrackingType.ENTER else TrackingType.EXIT
+        trackingType = if (this.data) TrackingType.ENTER else TrackingType.EXIT,
     )

@@ -74,7 +74,7 @@ class ApiRouter(private val staffTrackingDatabaseManager: StaffTrackingDatabaseM
             exception<DateTimeParseException> { call, _ ->
                 call.respondText(
                     text = "Date time information must be in ISO 8601 format",
-                    status = HttpStatusCode.BadRequest
+                    status = HttpStatusCode.BadRequest,
                 )
             }
         }

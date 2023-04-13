@@ -20,7 +20,7 @@ object TrackingServices {
     /** The application service to add some [trackingData] given the [trackingDataRepository]. */
     class AddTrackingData(
         private val trackingData: TrackingData,
-        private val trackingDataRepository: TrackingDataRepository
+        private val trackingDataRepository: TrackingDataRepository,
     ) : ApplicationService<Boolean> {
         override fun execute(): Boolean =
             trackingDataRepository.addTrackingData(trackingData)
@@ -32,7 +32,7 @@ object TrackingServices {
         private val healthProfessionalId: HealthProfessionalId,
         private val from: Instant?,
         private val to: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val trackingDataRepository: TrackingDataRepository,
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
@@ -45,7 +45,7 @@ object TrackingServices {
         private val roomId: RoomId,
         private val from: Instant?,
         private val to: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val trackingDataRepository: TrackingDataRepository,
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =
@@ -57,7 +57,7 @@ object TrackingServices {
     class GetLatestTrackingData(
         private val from: Instant?,
         private val to: Instant?,
-        private val trackingDataRepository: TrackingDataRepository
+        private val trackingDataRepository: TrackingDataRepository,
     ) : ApplicationService<Set<TrackingData>> {
 
         override fun execute(): Set<TrackingData> =

@@ -21,13 +21,13 @@ data class TimeSeriesTrackingData(
     @Contextual
     val dateTime: Instant,
     val metadata: TimeSeriesTrackingDataMetadata,
-    val trackingType: String
+    val trackingType: String,
 )
 
 /** The metadata of the time series composed by the [roomId] and the [healthProfessionalId]. */
 data class TimeSeriesTrackingDataMetadata(
     val roomId: String,
-    val healthProfessionalId: String
+    val healthProfessionalId: String,
 )
 
 /** Extension function to convert a tracking data to a database time series. */
@@ -36,9 +36,9 @@ fun TrackingData.toTimeSeriesTrackingData(): TimeSeriesTrackingData =
         dateTime = this.dateTime,
         metadata = TimeSeriesTrackingDataMetadata(
             this.roomId.id,
-            this.healthProfessionalId.id
+            this.healthProfessionalId.id,
         ),
-        trackingType = this.trackingType.name
+        trackingType = this.trackingType.name,
     )
 
 /** Extension function to convert a database time series to a tracking data. */
@@ -47,5 +47,5 @@ fun TimeSeriesTrackingData.toTrackingData(): TrackingData =
         dateTime = this.dateTime,
         roomId = RoomId(this.metadata.roomId),
         healthProfessionalId = HealthProfessionalId(this.metadata.healthProfessionalId),
-        trackingType = if (this.trackingType == TrackingType.ENTER.name) TrackingType.ENTER else TrackingType.EXIT
+        trackingType = if (this.trackingType == TrackingType.ENTER.name) TrackingType.ENTER else TrackingType.EXIT,
     )

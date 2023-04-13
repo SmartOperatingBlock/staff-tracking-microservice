@@ -24,7 +24,6 @@ import java.time.Instant
 
 /** The API of the Staff Tracking Microservice. */
 fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: String) {
-
     fun String.toDateTime(): Instant = Instant.parse(this)
 
     get("$apiPath/health-professionals-tracking-data/{healthProfessionalId}") {
@@ -32,7 +31,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             HealthProfessionalId(call.parameters["healthProfessionalId"].orEmpty()),
             call.request.queryParameters["from"]?.toDateTime(),
             call.request.queryParameters["to"]?.toDateTime(),
-            StaffTrackingController(databaseManager)
+            StaffTrackingController(databaseManager),
         ).execute().map { data ->
             data.toTrackingDataApiDto()
         }.toList().also { list ->
@@ -46,7 +45,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
             RoomId(call.parameters["roomId"].orEmpty()),
             call.request.queryParameters["from"]?.toDateTime(),
             call.request.queryParameters["to"]?.toDateTime(),
-            StaffTrackingController(databaseManager)
+            StaffTrackingController(databaseManager),
         ).execute().map { data ->
             data.toTrackingDataApiDto()
         }.toList().run {
@@ -59,7 +58,7 @@ fun Route.trackingAPI(databaseManager: StaffTrackingDatabaseManager, apiPath: St
         val currentBlockTrackingData = TrackingServices.GetLatestTrackingData(
             call.request.queryParameters["from"]?.toDateTime(),
             call.request.queryParameters["to"]?.toDateTime(),
-            StaffTrackingController(databaseManager)
+            StaffTrackingController(databaseManager),
         ).execute()
         currentBlockTrackingData.map { data ->
             data.toTrackingDataApiDto()
