@@ -29,9 +29,9 @@ class TestDatabaseSerialization : StringSpec({
         dateTime,
         TimeSeriesTrackingDataMetadata(
             roomId.id,
-            healthProfessionalId.id
+            healthProfessionalId.id,
         ),
-        trackingType.name
+        trackingType.name,
     )
 
     "It should be possible to create a time series from a tracking data" {

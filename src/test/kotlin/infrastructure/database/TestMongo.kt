@@ -22,13 +22,13 @@ class TestMongo : StringSpec({
         Instant.now(),
         RoomId("room1"),
         HealthProfessionalId("hp1"),
-        TrackingType.ENTER
+        TrackingType.ENTER,
     )
     val trackingDataWithExitType = TrackingData(
         Instant.now().plusSeconds(100),
         RoomId("room1"),
         HealthProfessionalId("hp1"),
-        TrackingType.EXIT
+        TrackingType.EXIT,
     )
 
     "Test tracking data creation on mongo db" {

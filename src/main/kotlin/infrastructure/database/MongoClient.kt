@@ -26,7 +26,7 @@ import java.time.Instant
  * The Mongo client.
  */
 class MongoClient(
-    connectionString: String
+    connectionString: String,
 ) : StaffTrackingDatabaseManager {
 
     init {
@@ -54,7 +54,7 @@ class MongoClient(
     override fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
         from: Instant?,
-        to: Instant?
+        to: Instant?,
     ): Set<TrackingData> =
         getLatestTrackingData(from, to).filter {
             it.healthProfessionalId == healthProfessionalId

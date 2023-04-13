@@ -24,7 +24,7 @@ class MockDbManager : StaffTrackingDatabaseManager {
     override fun getHealthProfessionalTrackingData(
         healthProfessionalId: HealthProfessionalId,
         from: Instant?,
-        to: Instant?
+        to: Instant?,
     ): Set<TrackingData> =
         trackingDataCollection.filter {
             it.healthProfessionalId == healthProfessionalId

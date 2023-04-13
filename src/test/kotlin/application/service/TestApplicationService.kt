@@ -24,7 +24,7 @@ class TestApplicationService : StringSpec({
         Instant.now(),
         RoomId("room#1"),
         HealthProfessionalId("12345678"),
-        TrackingType.ENTER
+        TrackingType.ENTER,
     )
     var staffTrackingController = StaffTrackingController(MockDbManager())
 
@@ -41,7 +41,7 @@ class TestApplicationService : StringSpec({
         staffTrackingController.getRoomTrackingData(
             mockTrackingData.roomId,
             null,
-            null
+            null,
         ).isNotEmpty() shouldBe true
     }
 
@@ -50,7 +50,7 @@ class TestApplicationService : StringSpec({
         staffTrackingController.getHealthProfessionalTrackingData(
             mockTrackingData.healthProfessionalId,
             null,
-            null
+            null,
         ).isNotEmpty() shouldBe true
     }
 
@@ -60,7 +60,7 @@ class TestApplicationService : StringSpec({
             Instant.now(),
             RoomId("room#1"),
             HealthProfessionalId("12345678"),
-            TrackingType.ENTER
+            TrackingType.ENTER,
         )
         staffTrackingController.addTrackingData(trackingData)
         staffTrackingController.getLatestTrackingData(beforeInstant, null).isNotEmpty() shouldBe true

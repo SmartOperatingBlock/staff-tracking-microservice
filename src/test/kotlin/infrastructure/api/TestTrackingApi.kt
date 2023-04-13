@@ -28,7 +28,7 @@ class TestTrackingApi : StringSpec({
         Instant.now(),
         RoomId("room1"),
         HealthProfessionalId("12345678"),
-        TrackingType.ENTER
+        TrackingType.ENTER,
     )
 
     val staffTrackingController = StaffTrackingController(MongoClient("mongodb://localhost:27017"))

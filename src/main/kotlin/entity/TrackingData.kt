@@ -19,7 +19,7 @@ data class TrackingData(
     val dateTime: Instant,
     val roomId: RoomId,
     val healthProfessionalId: HealthProfessionalId,
-    val trackingType: TrackingType
+    val trackingType: TrackingType,
 ) {
     override fun equals(other: Any?): Boolean = when {
         other === this -> true

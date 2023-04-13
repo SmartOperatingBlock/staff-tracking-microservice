@@ -21,7 +21,7 @@ data class TrackingDataApiDto(
     val dateTime: String,
     val roomId: String,
     val healthProfessionalId: String,
-    val trackingType: TrackingType
+    val trackingType: TrackingType,
 )
 
 /** Extension method to convert a [TrackingData] to a [TrackingDataApiDto]. */
@@ -30,5 +30,5 @@ fun TrackingData.toTrackingDataApiDto() =
         this.dateTime.toString(),
         this.roomId.id,
         this.healthProfessionalId.id,
-        this.trackingType
+        this.trackingType,
     )
