@@ -1,3 +1,37 @@
+## [1.0.3](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.2...1.0.3) (2023-04-26)
+
+
+### Style improvements
+
+* format code due to new kotlin-qa plugin update ([5a5a370](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5a5a370fcfe1e7ee30ba3d2342f2d4ac17610ac6))
+
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v3.1.2 ([ee4f669](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ee4f669186d61ade2537a3457737c2c3f13c591e))
+* **deps:** update codecov/codecov-action action to v3.1.3 ([bc4fbc0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/bc4fbc0fc1138ef8d3ec0e26b5b8b94bf9e50fdd))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.8.21 ([936ea5f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/936ea5f48f787a5a3e766374a856b34ed60d8549))
+* **deps:** update dependency ch.qos.logback:logback-classic to v1.4.7 ([c9308dd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c9308dd8c3b036d0c3055232daf4edcd45c5254a))
+* **deps:** update dependency com.fasterxml.jackson.module:jackson-module-kotlin to v2.15.0 ([d93c6a0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d93c6a015876c2316d738f213b541d5786eb5311))
+* **deps:** update dependency gradle to v8.1 ([38d8acb](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/38d8acb868ad523dac1a172a428d175e914436c8))
+* **deps:** update dependency gradle to v8.1.1 ([dc6ee94](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/dc6ee940a52e622b0cffeaa42c66970132950812))
+* **deps:** update dependency org.litote.kmongo:kmongo to v4.9.0 ([adf5338](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/adf5338a946cd0a393d9d57ca31012cf9f551c42))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.24 ([f274e63](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f274e637a0f54c65720776fe3d6e91ad42302e4c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.25 ([8c3af3d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/8c3af3d0f882eb75a00cbf773586f1c19d07a6fa))
+* **deps:** update kotest to v5.6.1 ([301eea8](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/301eea8295e052b5bf4a7d4f7c285acec1a07850))
+* **deps:** update ktor to v2.3.0 ([5902ce4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5902ce4e8e6e42774048d8411f17ca77248ce839))
+* **deps:** update node.js to 18.16 ([29e4b1d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/29e4b1dc54654c1c89a1e738b9f92c933679da3a))
+* **deps:** update plugin com.gradle.enterprise to v3.13 ([cb282ee](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/cb282ee25b898d701faaa9f03402d93707046253))
+* **deps:** update plugin kotlin-qa to v0.37.0 ([43903f6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/43903f6e74bbbee779c0ea92840f7e531a1f6668))
+* **deps:** update plugin kotlin-qa to v0.38.0 ([3dbb007](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/3dbb007da748c8fd6a8e59a6ea605eeabb94b4ee))
+* **deps:** update plugin kotlin-qa to v0.38.1 ([7caec24](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/7caec24861c150e3a1ec4ae7c85de253c97cc5d7))
+* **deps:** update plugin kotlin-qa to v0.39.0 ([69c0445](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/69c04454358a3dbefa0c566cf8f2720286af3e18))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.6 ([15de6a6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/15de6a6cddb230393df53b908d4f7fadc7ce4ed4))
+
 ## [1.0.2](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.1...1.0.2) (2023-04-05)
 
 
