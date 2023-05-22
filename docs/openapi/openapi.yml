@@ -1,7 +1,7 @@
 openapi: 3.0.0
 servers:
   - description: Staff Tracking Microservice
-    url: http://localhost:<port>/api
+    url: http://localhost:<port>/api/v1
 info:
   description: This is the API of the Staff Tracking microservice within the Smart Operating Block project.
   version: "1.0.0"
@@ -64,7 +64,7 @@ paths:
         '500':
           description: server error occurred
 
-  /room-tracking-data/{roomId}:
+  /rooms-tracking-data/{roomId}:
     get:
       tags:
         - Room Tracking API
