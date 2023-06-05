@@ -9,7 +9,7 @@
 package application.service
 
 /** The Application Service. */
-interface ApplicationService<out E> {
+fun interface ApplicationService<out E> {
 
     /** Execute the application service. */
     fun execute(): E
