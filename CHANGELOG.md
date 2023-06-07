@@ -1,3 +1,28 @@
+## [1.0.5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.4...1.0.5) (2023-06-07)
+
+
+### General maintenance
+
+* make interface functional ([70f82ed](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/70f82ed1998940b9648fb23c66e62d8993bc9db0))
+
+
+### Dependency updates
+
+* **deps:** update dependency com.fasterxml.jackson.module:jackson-module-kotlin to v2.15.2 ([6c7920d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/6c7920da85901b054b91e178ec64ad9ed06906dc))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.7.0 ([f94703a](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f94703a94a2c71a72772a507cfe0eab48d60578e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.27 ([c70de26](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c70de26e4fe13d5d3aab64571cd58053518fb613))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.29 ([5d905c4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5d905c421af016a299f63f1094505645e963e407))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.30 ([b94b1f7](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/b94b1f7f8e1ef5db87359cdea5f2bd45b6af266f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.32 ([7ec4c39](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/7ec4c39ad6fe3a42dcfa14676ee293f42f297b84))
+* **deps:** update ktor to v2.3.1 ([2eb1641](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/2eb1641ad814f99cb7ae89e3b7dec6a674930d64))
+* **deps:** update plugin com.gradle.enterprise to v3.13.3 ([ca393df](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ca393dfdb186a8b2a02fd7144a593b71399d2b34))
+* **deps:** update plugin kotlin-qa to v0.42.0 ([16c200d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/16c200db779bf67c65e216e8858c15be6f838f8e))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.8.20 ([45cd81b](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/45cd81b5003f6b43772c76ff6af39dfc2443095f))
+
 ## [1.0.4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.3...1.0.4) (2023-05-22)
 
 
