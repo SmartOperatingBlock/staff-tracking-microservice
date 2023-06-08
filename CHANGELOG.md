@@ -1,3 +1,12 @@
+## [1.0.6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.5...1.0.6) (2023-06-08)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.8.22 ([2d4b756](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/2d4b7561504f5c8ea7952f9be756bc4ea87e3d48))
+* **deps:** update plugin kotlin-qa to v0.43.0 ([bb8c67c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/bb8c67c02c1e053e526573b7d15285fcd4c6ce4b))
+* **deps:** update plugin kotlin-qa to v0.44.0 ([f0cb146](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f0cb14623b0c848a3e26f7e09d96b5bd004292c9))
+
 ## [1.0.5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.4...1.0.5) (2023-06-07)
 
 
