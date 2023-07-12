@@ -1,5 +1,5 @@
 [versions]
-confluent = "7.4.0"
+confluent = "7.4.1"
 kafka = "6.2.10-ce"
 kmongo = "4.9.0"
 kotest = "5.6.2"
