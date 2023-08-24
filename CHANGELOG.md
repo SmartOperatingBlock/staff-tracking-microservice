@@ -1,3 +1,42 @@
+## [1.0.8](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.7...1.0.8) (2023-08-24)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.10 ([d04712b](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d04712ba03a2426208b4e75281a58d2a79ed3543))
+* **deps:** update dependency ch.qos.logback:logback-classic to v1.4.10 ([6cfd0ea](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/6cfd0ea2d23d4385d0100439d7f43b6d4e4019cb))
+* **deps:** update dependency ch.qos.logback:logback-classic to v1.4.11 ([8364969](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/836496950fb16a299a306f2fb46e157cbcf54766))
+* **deps:** update dependency ch.qos.logback:logback-classic to v1.4.9 ([1ddf28d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/1ddf28d9fccfe51946d21c3a5920b37fb985511c))
+* **deps:** update dependency com.tngtech.archunit:archunit-junit5 to v1.1.0 ([a66fb43](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/a66fb436f3fe107a394098af2415d14634bd997e))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.7.1 ([c87cf54](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c87cf54b997c2526e1ac07ceb6811e920066d3fa))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.7.2 ([913e8b4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/913e8b4dc7a288a55c39ba888bc1a94f4c80883b))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.8.0 ([ea59b1c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ea59b1c42b677273f886f183ac56d3f7a3003f9a))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.8.1 ([c4c80cd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c4c80cd728863937ecc3f9e000d372134c7d0038))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.9.0 ([063a968](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/063a968d1af277fc469d0c412f9d0d805dae471b))
+* **deps:** update dependency gradle to v8.2.1 ([99aaa7f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/99aaa7fbd16fef658b5882a85dd75ee41006711c))
+* **deps:** update dependency gradle to v8.3 ([dcf6639](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/dcf6639ab0b85fef91ae71282c705092c5be42f3))
+* **deps:** update dependency io.confluent:kafka-json-serializer to v7.4.1 ([456f3c1](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/456f3c113875da52d2cd5a2e4365b9aed253b7e2))
+* **deps:** update dependency org.litote.kmongo:kmongo to v4.10.0 ([389f070](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/389f070ed5c0b92a5c6ae28714957c721f809620))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.40 ([6fa8c13](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/6fa8c13a04fd5d91194ea4333d94f8bc51cd59ec))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.41 ([9dd6708](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/9dd67089801852e67afe308ff7dc8551341c5c6a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.42 ([9378790](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/9378790886d794731e8b0d227f292080091bd1c8))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.43 ([fb63620](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/fb6362070c7714ba6edf89e34bf4625182100ff9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.44 ([9b19e50](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/9b19e50bef84a9d7216786b1ba63f1105e2df94b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.46 ([14994f3](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/14994f3ca548e906606684cb876b71a8a738d43e))
+* **deps:** update kafka to v6.2.11-ce ([26aeef0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/26aeef007ef7ace264c6d7ad6d48501cd009841f))
+* **deps:** update ktor to v2.3.3 ([c66bd63](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c66bd63b271ae8c9bfb7078a391d64aeecd47ff8))
+* **deps:** update node.js to 18.17 ([bcdb593](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/bcdb5932729c9b6f490f3a8d8f8f24b73dbba1f4))
+* **deps:** update plugin com.gradle.enterprise to v3.14 ([69db14a](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/69db14a2e1c6f3292615d825577e859f9b4a9ec0))
+* **deps:** update plugin com.gradle.enterprise to v3.14.1 ([7ca2f9d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/7ca2f9d4dba94508af1568feefc92e706049159b))
+* **deps:** update plugin kotlin-qa to v0.47.1 ([c0f3da0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c0f3da02a46ac01edee0e221a22033efeaadd39b))
+* **deps:** update plugin kotlin-qa to v0.48.0 ([192920c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/192920c82cba117b85fc2e0f211c30d19a83af3f))
+* **deps:** update plugin kotlin-qa to v0.49.0 ([d36db00](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d36db009338f703d3969eb20197fecdf2c6fcd3a))
+
+
+### Build and continuous integration
+
+* **deps:** update gradle/wrapper-validation-action action to v1.1.0 ([616e9e2](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/616e9e2dd25bae44f1cac42edf021df2d057ab05))
+
 ## [1.0.7](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.6...1.0.7) (2023-07-07)
 
 
