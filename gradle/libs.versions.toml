@@ -8,7 +8,7 @@ ktor = "2.3.3"
 
 [libraries]
 archunit = { module = "com.tngtech.archunit:archunit-junit5", version = "1.1.0" }
-embed-mongo = { module = "de.flapdoodle.embed:de.flapdoodle.embed.mongo", version = "4.9.1" }
+embed-mongo = { module = "de.flapdoodle.embed:de.flapdoodle.embed.mongo", version = "4.9.2" }
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.15.2" }
 kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka"}
 kafka-connect = { module = "org.apache.kafka:connect-runtime", version.ref = "kafka"}
