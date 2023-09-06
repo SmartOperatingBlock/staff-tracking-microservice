@@ -69,6 +69,7 @@ $dokka.location:entity/TrackingData/trackingType/#/PointingToDeclaration/staff-
 $dokka.location:entity/TrackingType.ENTER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}staff-tracking-microservice/entity/-tracking-type/-e-n-t-e-r/index.html
 $dokka.location:entity/TrackingType.EXIT///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}staff-tracking-microservice/entity/-tracking-type/-e-x-i-t/index.html
 $dokka.location:entity/TrackingType///PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/index.html
+$dokka.location:entity/TrackingType/entries/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/entries.html
 $dokka.location:entity/TrackingType/valueOf/#kotlin.String/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/value-of.html
 $dokka.location:entity/TrackingType/values/#/PointingToDeclaration/staff-tracking-microservice/entity/-tracking-type/values.html
 $dokka.location:infrastructure.api.routes////PointingToDeclaration/staff-tracking-microservice/infrastructure.api.routes/index.html
