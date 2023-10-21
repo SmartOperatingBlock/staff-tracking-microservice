@@ -1,3 +1,50 @@
+## [1.0.10](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.9...1.0.10) (2023-10-21)
+
+
+### Dependency updates
+
+* **deps:** update dependency com.fasterxml.jackson.module:jackson-module-kotlin to v2.15.3 ([83d4bea](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/83d4bea097601e8d17b3f3a2fafa116bdb8c47c3))
+* **deps:** update dependency gradle to v8.4 ([e9952e5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e9952e547eab87d66a6a59bffcb36b544457ff3b))
+* **deps:** update dependency io.confluent:kafka-json-serializer to v7.5.1 ([ed99b49](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ed99b49ff11a9c890cef80871c0e596afcd68681))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.54 ([d692031](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d69203145e81cb3a65c7865cbadf5e2a87f0fa9f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.55 ([d37818c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d37818cea41df276d19823a410fc2277fc15a340))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.56 ([cf00cec](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/cf00ceca4e9dcf29f4b6310288fd47bba0047ad1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.58 ([170a2c0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/170a2c0e2d441d7279791e9b1254d0024a7ea87f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.60 ([853b3ff](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/853b3fff5ff2c825c274e95e8ca2c05a905ae693))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.61 ([5aafd17](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/5aafd17234f4c7cfa2134d1a95ff1c7a16532856))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.62 ([0ea1b51](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/0ea1b514a79f1305ecf055e535c1a3faf370e700))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.63 ([d9342f3](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d9342f374d735f4b45ae103fbec2cbad3a80c386))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.64 ([e37592f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e37592f304fd3848dc95c8777621747c1c14d31d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.65 ([e043f78](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/e043f78e2d3f734160d40d66263f90e3d310a8c1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.66 ([55970fd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/55970fd10f1a30c9bfe1fe337d616d34cda1d046))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.67 ([56723b8](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/56723b8e6eea8908f997f793ac893b0f7ff1d869))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.68 ([d6ce5c6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d6ce5c630ca24fa7ab59778d87b53fa5cac75f3f))
+* **deps:** update kotest to v5.7.2 ([c3abcd9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/c3abcd932e0e2131a4c68ca41b6c57c366f191c2))
+* **deps:** update ktor to v2.3.5 ([04a77d6](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/04a77d693027d74b5a801c3662f15598c001ccd1))
+* **deps:** update node.js to 18.18 ([cdb956d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/cdb956db1bf8db7ef17bc10f4f6f6fd77c23705a))
+* **deps:** update plugin com.gradle.enterprise to v3.15 ([4d37d9a](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/4d37d9af05f7ab7076fd9935f54ff64bea969794))
+* **deps:** update plugin com.gradle.enterprise to v3.15.1 ([46f92a4](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/46f92a4bbdc2587a5d44109357f7f36289e4ae21))
+* **deps:** update plugin kotlin-qa to v0.50.0 ([2631ecf](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/2631ecf2732489e670f17d47c005c316fa451311))
+* **deps:** update plugin kotlin-qa to v0.51.0 ([9bf03cd](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/9bf03cd1f0f93c67a14b59abe504e2507ee3b615))
+* **deps:** update plugin kotlin-qa to v0.51.1 ([89b3d53](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/89b3d53379cc269cc63816e90324b9659f31d5d6))
+* **deps:** update plugin kotlin-qa to v0.52.0 ([f067113](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/f067113ec11dc33bf79fa7600b2520c23e636327))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.11 ([412931f](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/412931f176813e93868b16e6adb3081de871409a))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.12 ([0891653](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/08916538a401009b47b47174dd9373372a7af585))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.13 ([53ffe9b](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/53ffe9b4065d68f4b3a659117e4a7348efad9057))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.9.10 ([245914d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/245914d47c9f5c93cf64ec1772ac6baf93fa6a7b))
+
+
+### Build and continuous integration
+
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.10 ([45d6af0](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/45d6af00d5e20d12339cdf6118e3dd54b21eaa8c))
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.4 ([78b5645](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/78b56459d712038f84e9752b07550b5fa2ff567d))
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.5 ([ac819ca](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ac819ca61728dc9429a07c84876d644e073fe9c3))
+* **deps:** update smartoperatingblock/release-and-delivery-action action to v1.0.6 ([0567a06](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/0567a067a1a0bf4c74e54dae8012defb9b83823b))
+
 ## [1.0.9](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.8...1.0.9) (2023-09-06)
 
 
