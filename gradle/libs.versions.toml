@@ -3,7 +3,7 @@ confluent = "7.5.1"
 kafka = "6.2.11-ce"
 kmongo = "4.10.0"
 kotest = "5.7.2"
-kotlin = "1.9.10"
+kotlin = "1.9.20"
 ktor = "2.3.5"
 
 [libraries]
