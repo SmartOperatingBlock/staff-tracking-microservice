@@ -1,3 +1,20 @@
+## [1.0.11](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.10...1.0.11) (2023-10-31)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.20 ([be95b9c](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/be95b9cbc2b92a450d304a38992ff70bba6aedeb))
+* **deps:** update dependency de.flapdoodle.embed:de.flapdoodle.embed.mongo to v4.9.3 ([40d233b](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/40d233bf70376c48a3fd28d346786ffcce8bf889))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.69 ([d6bd5fc](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/d6bd5fc6a9cdcb8edac878a328738ad356df71d9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.70 ([7114b5d](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/7114b5d8807dfaac446d059b3b998233a8bbe81a))
+* **deps:** update node.js to 20.9 ([4972c25](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/4972c258fb39a674366a7711092fe33de4f9abc3))
+* **deps:** update node.js to v20 ([ae04da1](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/ae04da183d2309b7d18b055c60958ab03d2bad1e))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4 ([b92f9e5](https://github.com/SmartOperatingBlock/staff-tracking-microservice/commit/b92f9e54bd6bde6269a34299e9d2b2a48935f1b6))
+
 ## [1.0.10](https://github.com/SmartOperatingBlock/staff-tracking-microservice/compare/1.0.9...1.0.10) (2023-10-21)
 
 
